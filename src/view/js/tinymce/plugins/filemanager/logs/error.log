@@ -1,0 +1,658 @@
+[2013-01-03 14:38:50] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-03 14:38:55] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-03 14:39:05] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-03 14:39:10] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-03 14:39:19] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-22 19:25:32] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2013-01-22 19:40:30] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-22 19:41:01] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2013-01-24 11:29:37] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-24 11:29:48] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-24 11:29:59] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-24 11:32:28] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-24 11:32:36] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-01-24 11:32:41] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-02-01 09:45:33] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-02-19 15:41:36] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-04-24 18:59:01] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2013-04-30 17:28:15] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-04-30 17:29:58] [ERROR] System.Exception: No se ha creado el directorio para esta aplicacion
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnInit(ManagerEngine man)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 44
+[2013-05-14 19:00:48] [ERROR] System.ArgumentNullException: Attempt to create delete event with null entity
+Parameter name: entity
+   at NHibernate.Event.DeleteEvent..ctor(Object entity, IEventSource source)
+   at NHibernate.Impl.SessionImpl.Delete(Object obj)
+   at asf.cms.dal.DAL`1.Delete(T o) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 30
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-05-14 19:02:19] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-05-17 13:53:40] [ERROR] System.NullReferenceException: Object reference not set to an instance of an object.
+   at asf.cms.bll.PublicationFile.RenameTo(PublicationFile to) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 51
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.RenameTo(IFile dest)
+   at Moxiecode.FileManager.FileManagerPlugin.MoveFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.FileManager.FileManagerPlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-05-22 18:34:49] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2013-06-18 20:33:30] [ERROR] System.Exception: No se ha creado el directorio para esta aplicacion
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnInit(ManagerEngine man)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 44
+[2013-06-18 20:34:30] [ERROR] System.Exception: No se ha creado el directorio para esta aplicacion
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnInit(ManagerEngine man)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 44
+[2013-07-11 17:26:14] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-09-30 17:45:10] [ERROR] NHibernate.NonUniqueResultException: query did not return a unique result: 2
+   at NHibernate.Impl.AbstractQueryImpl.UniqueElement(IList list)
+   at NHibernate.Impl.AbstractQueryImpl.UniqueResult[T]()
+   at asf.cms.dal.DAL`1.getObject(String query, Dictionary`2 parameters) in D:\proyectos\einsNull\cmsDemo\src\dal\DAL.cs:line 128
+   at asf.cms.dal.FileDAL.getByPath(String path) in D:\proyectos\einsNull\cmsDemo\src\dal\FileDAL.cs:line 20
+   at asf.cms.bll.PublicationFile.Delete() in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 60
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-04 20:35:54] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-04 20:36:09] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-04 20:36:22] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:04:05] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:18:53] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:23:45] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:24:03] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:34:55] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:35:17] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-11-05 10:35:35] [ERROR] Moxiecode.Manager.ManagerException: {#error.file_not_exists}
+   at Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-12-05 10:11:28] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\101_Formato_de_Declaracion_de_Situacion_Patrimonial\DecSitPat_web.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-12-05 10:11:41] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\101_Formato_de_Declaracion_de_Situacion_Patrimonial\DecSitPat_web.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-12-05 10:12:02] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\101_Formato_de_Declaracion_de_Situacion_Patrimonial\DecSitPat_web.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-12-05 10:12:09] [ERROR] System.UnauthorizedAccessException: Access to the path is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.IO.FileInfo.MoveTo(String destFileName)
+   at Moxiecode.Manager.FileSystems.LocalFile.RenameTo(IFile dest)
+   at Moxiecode.FileManager.FileManagerPlugin.MoveFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.FileManager.FileManagerPlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2013-12-20 13:07:59] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2014-01-06 19:13:11] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2014-01-06 19:18:38] [ERROR] System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at asf.cms.util.Encoder.getMime(String extension) in D:\proyectos\einsNull\cmsDemo\src\util\Encoder.cs:line 73
+   at asf.cms.bll.PublicationFile..ctor(String permalink, String name, String path) in D:\proyectos\einsNull\cmsDemo\src\bll\PublicationFile.cs:line 19
+   at Moxiecode.Manager.Plugins.AsfSupportPlugin.OnFileAction(ManagerEngine man, FileAction action, IFile file1, IFile file2)
+   at Moxiecode.Manager.ManagerEngine.DispatchEvent(EventType type, Object[] args)
+   at Moxiecode.Manager.FileSystems.LocalFile.DispatchFileAction(FileAction action, IFile file2)
+   at Moxiecode.Manager.FileSystems.LocalFile.ImportFile(String local_absolute_path)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2014-07-25 10:37:09] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:37:18] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:37:27] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:37:59] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:38:13] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:38:22] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:38:44] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:39:03] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-07-25 10:39:09] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa25jul14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-08-29 09:25:22] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2014-09-10 19:21:18] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 19:21:39] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 19:30:12] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 19:30:24] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 19:30:39] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 19:31:10] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\6.1. PROYECTO ESTRUCTURAL.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 21:42:55] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\PROYECTO ARQUITECTONICO.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-09-10 21:43:02] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\96_Procedimiento_de_Obra_Publica_y_Servicios_relacionados\PROYECTO ARQUITECTONICO.zip' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2014-10-23 09:24:37] [ERROR] System.UnauthorizedAccessException: Access to the path 'G:\Sitios\asf_cms\uploads\162_compendio\ResumenEjecutivoPrensa23oct14.pdf' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Moxiecode.Manager.FileSystems.LocalFile.Delete(Boolean deep)
+   at Moxiecode.Manager.CorePlugin.DeleteFiles(ManagerEngine man, Hashtable input)
+   at Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   at Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   at ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Sitios\asf_cms\view\js\tinymce\plugins\filemanager\rpc\default.aspx:line 48
+[2015-06-02 16:53:27] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2015-06-02 16:58:30] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2015-06-02 17:03:12] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2015-06-02 17:13:58] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2015-06-02 17:19:11] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2015-06-02 17:25:03] [ERROR] System.IO.IOException: There is not enough space on the disk.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.WriteCore(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.FileStream.Write(Byte[] array, Int32 offset, Int32 count)
+   at System.Web.HttpRawUploadedContent.WriteBytes(Int32 offset, Int32 length, Stream stream)
+   at System.Web.HttpInputStream.WriteTo(Stream s)
+   at System.Web.HttpPostedFile.SaveAs(String filename)
+   at Moxiecode.Manager.CorePlugin.HandleUploadedFile(ManagerEngine man, IFile target_dir, HttpPostedFile uploaded_file, String file_name, ResultSet rs)
+[2019-09-09 13:25:39] [ERROR] Moxiecode.Manager.ManagerException: {#error.no_access}
+   en Moxiecode.Manager.ManagerEngine.GetFile(String path, String child, FileType type)
+   en Moxiecode.Manager.ManagerEngine.GetFile(String path)
+   en Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   en Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   en Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   en ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) en d:\Armando\code\ASF_CMS\src\view\js\tinymce\plugins\filemanager\rpc\default.aspx:línea 50
+[2019-09-10 11:40:18] [ERROR] Moxiecode.Manager.ManagerException: {#error.no_access}
+   en Moxiecode.Manager.ManagerEngine.GetFile(String path, String child, FileType type)
+   en Moxiecode.Manager.ManagerEngine.GetFile(String path)
+   en Moxiecode.Manager.CorePlugin.ListFiles(ManagerEngine man, String cmd, Hashtable input)
+   en Moxiecode.Manager.CorePlugin.OnRPC(ManagerEngine man, String cmd, Hashtable input)
+   en Moxiecode.Manager.ManagerEngine.ExecuteEvent(EventType type, Object[] args)
+   en ASP.view_js_tinymce_plugins_filemanager_rpc_default_aspx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) en d:\Armando\code\ASF_CMS\src\view\js\tinymce\plugins\filemanager\rpc\default.aspx:línea 50

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.ModificationLogVO" table="modification_log">
+
+    <id name="Id">
+      <column name="id" sql-type="int" not-null="true"/>
+    </id>
+
+    <property name="TargetType">
+      <column name="target_type"/>
+    </property>
+
+    <property name="TargetId">
+      <column name="target_id"/>
+    </property>
+
+    <property name="UserName">
+      <column name="username"/>
+    </property>
+
+    <property name="Created">
+      <column name="created"/>
+    </property>
+
+    <property name="Type">
+      <column name="modification_type"/>
+    </property>
+
+    <property name="Permalink">
+      <column name="permalink"/>
+    </property>
+
+    <property name="FieldChanges">
+      <column name="field_changes"/>
+    </property>
+
+    <property name="HistoricId">
+      <column name="historic_id"/>
+    </property>
+
+  </class>
+</hibernate-mapping>

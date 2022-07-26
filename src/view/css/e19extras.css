@@ -1,0 +1,208 @@
+﻿/* General */
+@font-face {
+    font-family: 'oswald';
+    src: url('../assets/font/oswald-regular.ttf');
+}
+
+
+
+header {
+display:none;
+}
+
+.cMax {
+    padding-top: 3em;
+}
+
+/* Fondos */
+
+.fondo1 {
+    background-image: url('../assets/imagenes/fondo1.jpg');
+}
+
+.fondo2 {
+    background-image: url('../assets/imagenes/fondo2.jpg');
+}
+
+
+.fondo3 {
+    background-image: url('../assets/imagenes/fondo3.jpg');
+}
+
+.fondo4 {
+    background-image: url('../assets/imagenes/fondo4.jpg');
+}
+
+.Qr:hover:before {
+	background-image: url('../assets/imagenes/iconos/qr.png');
+}
+
+#txtbusc {
+    background-image: url('../assets/imagenes/iconos/lupa_d.png');
+}
+
+a.back-to-top {
+	background: gainsboro url('../assets/imagenes/iconos/derecha.png') no-repeat center;
+}
+
+/* Menu informes */
+
+.mInfInformes {
+	background-image: url('../assets/imagenes/iconos/inf_audit_g.png');
+    background-size: 100%;
+	width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+.mInfInformes:hover {
+	background-image: url('../assets/imagenes/iconos/inf_audit.png');
+}
+
+.mInfOtros {
+	background-image: url('../assets/imagenes/iconos/otros_inf_g.png');
+    background-size: 100%;
+	width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+.mInfOtros:hover {
+	background-image: url('../assets/imagenes/iconos/otros_inf.png');
+}
+
+/* Menu administración */
+
+.mAdmMateriales {
+	background-image: url('../assets/imagenes/iconos/dgrm1.png');
+    background-size: 100%;
+	width: 199px;
+    height: 234px;
+    display: inline-block;
+}
+
+.mAdmMateriales:hover {
+	background-image: url('../assets/imagenes/iconos/dgrm2.png');
+}
+
+.mAdmHumanos {
+	background-image: url('../assets/imagenes/iconos/dgrh1.png');
+	width: 199px;
+    height: 234px;
+    display: inline-block;
+}
+
+.mAdmHumanos:hover {
+	background-image: url('../assets/imagenes/iconos/dgrh2.png');
+}
+
+.mAdmBolsa {
+	background-image: url('../assets/imagenes/iconos/bolsa1.png');
+	width: 199px;
+    height: 234px;
+    display: inline-block;
+}
+
+.mAdmBolsa:hover {
+	background-image: url('../assets/imagenes/iconos/bolsa2.png');
+}
+
+.hov img {
+
+	max-width: 100%;
+}
+
+.hov img:nth-child(2) {
+  display: initial;
+}
+
+
+.hov:hover img:nth-child(2) {
+    display: initial;
+}
+
+.hov:hover img:nth-child(1){
+    display: initial;
+}
+
+/* Mail Panel */
+
+#msgPanel { /*position:absolute;top:0px;right:0px;z-index:1000;background-color:#2A2735;color:white;border:solid 2px #AC9C63;width:300px;height:150px;*/
+	position: fixed;
+	top: 54px;
+	right: calc((100%/2) );
+	z-index: 1000;
+	background-color: #E8E5DE;
+	color: #AC9C63;
+	border: 2px solid rgb(172, 156, 99);
+	width: 400px;
+	/*height: 600px;*/
+	max-width: 95%;
+	max-height: 95%;
+	display: block;
+	padding: 0.7em;
+}
+
+#msgPanel .fieldError {
+	background-color: red;
+}
+
+#msgFromInput {
+	width: 88%;
+	margin-left: 21px;
+}
+
+#msgContentInput {
+	width: 89%;
+	height: 340px;
+	margin-left: 20px;
+}
+
+#msgInfo {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index: 1100;
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+	background-color: rgba(50, 50, 50, 0.7);
+}
+#msgInfo p {
+	text-align: center;
+	font-size: 1.1em;
+	background-color: #E8E5DE;
+}
+
+
+.fondoPrueba {
+	background-image: initial;
+	background-color: blue;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+
+#msgPanel { 
+	position: fixed;
+	top: 5px;
+	right: 1px;
+	z-index: 1000;
+	background-color: #E8E5DE;
+	color: #AC9C63;
+	border: 2px solid rgb(172, 156, 99);
+	width: 400px;
+	/*height: 600px;*/
+	max-width: 95%;
+	max-height: 95%;
+	display: block;
+	}
+
+}
+
+
+
+}
+
+

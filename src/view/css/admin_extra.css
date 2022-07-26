@@ -1,0 +1,26 @@
+﻿.menuSelect
+{
+	font-size:12px;
+}
+.menuCommand
+{
+	font-size:11px;width:70px;height:30px;margin:5px;
+}
+h3
+{
+	background-color:#9C2A29;
+	color:#dddddd;
+	padding:5px;
+	width:70%;
+	font-size:12px;
+}
+h3 a
+{
+	color:White;
+	text-decoration:none;
+}
+
+.ui-jqgrid .ui-jqgrid-titlebar
+{
+    height: 1.2em;
+}

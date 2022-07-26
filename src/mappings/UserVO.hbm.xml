@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.UserVO" table="user">
+
+    <id name="Username">
+      <column name="username" not-null="true"/>
+      <generator class="assigned" />
+    </id>
+    <property name="Password">
+      <column name="password"/>
+    </property>
+    <property name="Type">
+      <column name="type"/>
+    </property>
+    <property name="Active">
+      <column name="active"/>
+    </property>
+  </class>
+</hibernate-mapping>

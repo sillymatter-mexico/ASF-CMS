@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#icon_insert.title}</title>
+	<link type="text/css" rel="stylesheet" href="css/dialog.css">
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+<script language="javascript" type="text/javascript" src="../filemanager/js/mcfilemanager.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+
+<form onsubmit="IconIncludeDialog.insert();return false;" action="#" name="iconIncludePluginForm">
+	<div>
+		<p>
+			Seleccione el &iacute;con a insertar:
+			<img id="pdf" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="Adobe PDF file" src="img/icon_pdf.png" />
+			<img id="doc" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="Microsoft Office Word file" src="img/icon_doc.png" />
+			<img id="xls" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="Microsoft Office Excel file" src="img/icon_xls.png" />
+			<img id="ppt" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="Microsoft Office PowerPoint" src="img/icon_ppt.png" />
+			<img id="zip" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="Compressed ZIP file" src="img/icon_zip.png" />
+			<img id="ext" width="16" height="16" class="icon" onclick="IconIncludeDialog.iconClick(event);" alt="External link" src="img/icon_external.png" />
+		</p>
+		<p>
+			Seleccione el archivo:
+			<input id="mceIconIncludeFilePath" name="mceIconIncludeFilePath" type="text" class="text" /><input onclick="IconIncludeDialog.browseClick();" type="button" value="..." />
+		</p>
+		<input id="iconType" name="iconType" type="hidden" />
+	</div>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="IconIncludeDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

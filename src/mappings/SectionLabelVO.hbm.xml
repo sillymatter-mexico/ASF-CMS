@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.SectionLabelVO" table="section_label">
+
+    <composite-id name="SectionLabelId" class="SectionLabelIdVO">
+      <key-property name="SectionId" column="section_id" type="Int32" />
+      <key-property name="LanguageId" column="language_id" type="Int32" />
+    </composite-id>
+    <property name="Content">
+      <column name="content"/>
+    </property>
+    
+  </class>
+</hibernate-mapping>

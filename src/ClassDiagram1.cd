@@ -1,0 +1,958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="asf.cms.bll.AuditFinder" Collapsed="true">
+    <Position X="58" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAEAAgAAAEBAAAAAAICgAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\AuditFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.AuditLoader" Collapsed="true">
+    <Position X="59.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>bll\AuditLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.AuditReport" Collapsed="true">
+    <Position X="61.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>bll\AuditReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.BasePage" Collapsed="true">
+    <Position X="27.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>bll\BasePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Group" Collapsed="true">
+    <Position X="65" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAEAEAAAAAAAAEgQQAgAAAAAAAAAAA=</HashCode>
+      <FileName>bll\Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Language" Collapsed="true">
+    <Position X="61.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAI=</HashCode>
+      <FileName>bll\Language.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Login" Collapsed="true">
+    <Position X="54.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>bll\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Menu" Collapsed="true">
+    <Position X="56.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAgIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.MenuItem" Collapsed="true">
+    <Position X="58" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.News" Collapsed="true">
+    <Position X="68.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAIAAAAAAAAIAAQDAAAAAAAAAQAAQAAAAAAAIA=</HashCode>
+      <FileName>bll\News.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Publication" Collapsed="true">
+    <Position X="58" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAgAIAAAIAAAAAAAEACBAAUAAEAAADIBmAAAAgQkYA=</HashCode>
+      <FileName>bll\Publication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.PublicationFile" Collapsed="true">
+    <Position X="61.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAIAAAAAAAAQAAEABAAABAAAAAAAIAA=</HashCode>
+      <FileName>bll\PublicationFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Recuperacion" Collapsed="true">
+    <Position X="65" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>bll\Recuperacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.RecuperacionTree" Collapsed="true">
+    <Position X="68.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\RecuperacionTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.RecuperacionFile" Collapsed="true">
+    <Position X="66.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAQAAAACAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\RecuperacionTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.Section" Collapsed="true">
+    <Position X="61.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>INIAAIIABJJAAEAgAEAAAAABQBEAAQUgYohAEEAQhoA=</HashCode>
+      <FileName>bll\Section.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.SectionTree" Collapsed="true">
+    <Position X="54.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>bll\SectionTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.SectionTreeNode" Collapsed="true">
+    <Position X="56.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAAAAAAAAAEIAAAAAFQAQAAAAIEAAACBAAAQEAEAI=</HashCode>
+      <FileName>bll\SectionTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.SiteContent" Collapsed="true">
+    <Position X="61.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAABAAAABAAAAIEAAAICAAAAAAAAAAQAAggAA=</HashCode>
+      <FileName>bll\SiteContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.bll.User" Collapsed="true">
+    <Position X="66.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAABAAAAEAAAAAAAAAAAAAAEAAAAAAAAQA=</HashCode>
+      <FileName>bll\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.AuditoriaController" Collapsed="true">
+    <Position X="19.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgEAAQCAAAAAIAEAAQAAAAAAAAAAAAgAAAAEgAAA=</HashCode>
+      <FileName>controller\AuditoriaController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.AuditReportController" Collapsed="true">
+    <Position X="24" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAACAQAAAAAAAIAAAAAAACAAAAACAAAAI=</HashCode>
+      <FileName>controller\AuditReportController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.Controller" Collapsed="true">
+    <Position X="17.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAkBACCAAACACAAABAAAAgAgAIQAAAAQAAAA=</HashCode>
+      <FileName>controller\Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.DefaultController" Collapsed="true">
+    <Position X="30.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAgAA=</HashCode>
+      <FileName>controller\DefaultController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.FileController" Collapsed="true">
+    <Position X="1.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\FileController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.GroupController" Collapsed="true">
+    <Position X="3.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAABEAAAAAAAAAAEgQAAgAECAAAAAAAI=</HashCode>
+      <FileName>controller\GroupController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.HttpHandlerController" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAIAAAgEAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>controller\HttpHandlerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.LoginController" Collapsed="true">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.MenuController" Collapsed="true">
+    <Position X="10.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>controller\MenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.NewsAdmController" Collapsed="true">
+    <Position X="12.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAI=</HashCode>
+      <FileName>controller\NewsAdmController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.PublicationAdmController" Collapsed="true">
+    <Position X="15" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEgAAAAAACAAAEAAAAEAAAEAAAACAAAAAAAAAAI=</HashCode>
+      <FileName>controller\PublicationAdmController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.PublicationController" Collapsed="true">
+    <Position X="17.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\PublicationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.RecuperacionController" Collapsed="true">
+    <Position X="21.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAIAAAAEAACAAAAAAAAAAAAAIAAACAAAAAAAAAAI=</HashCode>
+      <FileName>controller\RecuperacionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.SectionAdmController" Collapsed="true">
+    <Position X="26.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAEAAAAAAACAAAAIAAAAAAAEAAAAiAAAAAAAAAAI=</HashCode>
+      <FileName>controller\SectionAdmController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.SectionController" Collapsed="true">
+    <Position X="28.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\SectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.controller.UserController" Collapsed="true">
+    <Position X="33" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAACAAAAAAAAAAAAAAAAACAAAAAAEAAAI=</HashCode>
+      <FileName>controller\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.AuditDAL" Collapsed="true">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAgBAEAAAAIAAAAAAAAAAACCAAAgAAAAAAACAAAAA=</HashCode>
+      <FileName>dal\AuditDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.AuditEntityDAL" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\AuditEntityDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.AuditReportDAL" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\AuditReportDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.DAL&lt;T&gt;" Collapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAkAAAAAAAAIAACAAAAAAAAUAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>dal\DAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.FileDAL" Collapsed="true">
+    <Position X="17.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAIAABAAAAAAgAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\FileDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.GroupDAL" Collapsed="true">
+    <Position X="21.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>dal\GroupDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.GroupHasSectionDAL" Collapsed="true">
+    <Position X="24" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\GroupHasSectionDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.GroupHasUserDAL" Collapsed="true">
+    <Position X="26.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\GroupHasUserDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.LanguageDAL" Collapsed="true">
+    <Position X="28.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\LanguageDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.MenuDAL" Collapsed="true">
+    <Position X="30.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>dal\MenuDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.NewsDAL" Collapsed="true">
+    <Position X="33" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAQAAAAIAAAAAAAAAQAAAAAAAAAAQAAwAAAAAAAAA=</HashCode>
+      <FileName>dal\NewsDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.PublicationDAL" Collapsed="true">
+    <Position X="35.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAACABAAAAAAABAAAAAAAAFAIAgAAoAAAkIA=</HashCode>
+      <FileName>dal\PublicationDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.RecuperacionDAL" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dal\RecuperacionDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.SectionDAL" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACAAAIAFAAAAUAAAABAAAAAAIAAAAAgAAAAAAgQA=</HashCode>
+      <FileName>dal\SectionDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.SectionHasMenuDAL" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>dal\SectionHasMenuDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.SectionLabelDAL" Collapsed="true">
+    <Position X="15" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIA=</HashCode>
+      <FileName>dal\SectionLabelDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.dal.UserDAL" Collapsed="true">
+    <Position X="19.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAAA=</HashCode>
+      <FileName>dal\UserDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.web.Global" Collapsed="true">
+    <Position X="61.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAIAEAAAAAAAAAAFGIBQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.helper.NHibernateHelper" Collapsed="true">
+    <Position X="56.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAgAAAAAAAAIAAAAAACAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>helper\NHibernateHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.membership.MySQLMembershipProvider" Collapsed="true">
+    <Position X="61.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQSAoAIAAQiEgQrNmYAEAgAQAwIBAJICPIEQIIkAAAQ=</HashCode>
+      <FileName>membership\MySQLMembershipProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.membership.MySQLRoleProvider" Collapsed="true">
+    <Position X="63.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEEAAwAAAEAQAAAAAABAAAAAAAAAIAAAAEAAEQAAA=</HashCode>
+      <FileName>membership\MySQLRoleProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.membership.MySQLSessionProvider" Collapsed="true">
+    <Position X="65" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>membership\MySQLSessionProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.AuditEntityVO" Collapsed="true">
+    <Position X="56.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAGQAAAAQAAAAAAIAAAAAAAAAAAEA=</HashCode>
+      <FileName>model\AuditEntityVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.AuditReportInfo" Collapsed="true">
+    <Position X="63.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAEAACAAAAAAAAFAAAAAAAAAgABIAAAA=</HashCode>
+      <FileName>model\AuditReportInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.AuditReportItem" Collapsed="true">
+    <Position X="65" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAACAgAAAAAEAIABAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>model\AuditReportItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.AuditReportVO" Collapsed="true">
+    <Position X="66.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAABIAAAAAACAQAAAAAAAACAIAAARAAAAAAAAA=</HashCode>
+      <FileName>model\AuditReportVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.AuditResultVO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="68.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAIQAEAAAEAAAACAAAAEABAhIAAAAAAAAEA=</HashCode>
+      <FileName>model\AuditResultVO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="asf.cms.model.AuditVO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="54.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAECAAECoAAEAAgAAAABAAABAAAAAAQA=</HashCode>
+      <FileName>model\AuditVO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="asf.cms.model.FileVO" Collapsed="true">
+    <Position X="59.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAAAEIAAAAAAAQAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\FileVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.GroupHasSectionIdVO" Collapsed="true">
+    <Position X="66.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAQAAA=</HashCode>
+      <FileName>model\GroupHasSectionIdVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.GroupHasSectionVO" Collapsed="true">
+    <Position X="68.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\GroupHasSectionVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.GroupHasUserIdVO" Collapsed="true">
+    <Position X="54.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAgQAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\GroupHasUserIdVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.GroupHasUserVO" Collapsed="true">
+    <Position X="56.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\GroupHasUserVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.GroupVO" Collapsed="true">
+    <Position X="58" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\GroupVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.LanguageVO" Collapsed="true">
+    <Position X="63.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\LanguageVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.MenuVO" Collapsed="true">
+    <Position X="59.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>model\MenuVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.NewsVO" Collapsed="true">
+    <Position X="54.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAACgAAEEAAAAAAAAAAAhAAAQABQAAIBQAQAAA=</HashCode>
+      <FileName>model\NewsVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.PublicationAdminVO" Collapsed="true">
+    <Position X="59.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAEAAAAAAAAAAAgAAAQAAAAEAAIAAAAA=</HashCode>
+      <FileName>model\PublicationAdminVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.PublicationVO" Collapsed="true">
+    <Position X="63.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIEAgAAAEAgCAAAAAAAAhCAAUQgQAAABQIQQAA=</HashCode>
+      <FileName>model\PublicationVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.RecuperacionVO" Collapsed="true">
+    <Position X="54.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAEAAAAAAAAAAAAACAAAgAAAAAAAAAIA=</HashCode>
+      <FileName>model\RecuperacionVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SearchResultVO" Collapsed="true">
+    <Position X="59.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAEgAAAIAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>model\SearchResultVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SectionHasMenuIdVO" Collapsed="true">
+    <Position X="63.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAACAQAAA=</HashCode>
+      <FileName>model\SectionHasMenuIdVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SectionHasMenuVO" Collapsed="true">
+    <Position X="65" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>model\SectionHasMenuVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SectionLabelIdVO" Collapsed="true">
+    <Position X="66.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAgAAAIAAAAAAAAAQAAA=</HashCode>
+      <FileName>model\SectionLabelIdVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SectionLabelVO" Collapsed="true">
+    <Position X="68.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>model\SectionLabelVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SectionVO" Collapsed="true">
+    <Position X="58" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAAAAAAgAAAAAAAAABAAAQUgQAAAEAAABAA=</HashCode>
+      <FileName>model\SectionVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.SessionVO" Collapsed="true">
+    <Position X="59.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACBAAgAAAAAAAAAAACAAAAAAAAAAYAIAACAAAACAA=</HashCode>
+      <FileName>model\SessionVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.model.UserVO" Collapsed="true">
+    <Position X="68.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAiAQAAAAAAAAA=</HashCode>
+      <FileName>model\UserVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.util.Encoder" Collapsed="true">
+    <Position X="58" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAEAAAAAAAAQAAgABAAAAAAAAEAAAAAABAAAAIAA=</HashCode>
+      <FileName>util\Encoder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.util.GridInput" Collapsed="true">
+    <Position X="63.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAAAAAAAAAQBEAAEARAARABAAEQQAAAAEAACCAQAAA=</HashCode>
+      <FileName>util\GridInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.util.RowGrid" Collapsed="true">
+    <Position X="56.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAACAAAAgA=</HashCode>
+      <FileName>util\RowGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.util.TreeItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="65" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAEBgBAAAAAAAAgAAAQAAABAAQAEAAAI=</HashCode>
+      <FileName>util\TreeItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="asf.cms.view.audit.ListReports" Collapsed="true">
+    <Position X="22.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\audit\ListReports.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.audit.PreloadReport" Collapsed="true">
+    <Position X="29.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\audit\PreloadReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.audit.Search" Collapsed="true">
+    <Position X="58" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\audit\Search.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.auditReport.Edit" Collapsed="true">
+    <Position X="38.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\auditReport\Edit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.auditReport.Indice" Collapsed="true">
+    <Position X="40.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\auditReport\Indice.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.auditReport.List" Collapsed="true">
+    <Position X="45.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\auditReport\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.auditReport.New" Collapsed="true">
+    <Position X="66.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\auditReport\New.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.Default" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.Login" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.Search" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\Search.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.util" Collapsed="true">
+    <Position X="54.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\util.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.Index" Collapsed="true">
+    <Position X="59.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\widgets\ui\Index.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.group.List" Collapsed="true">
+    <Position X="25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\group\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.group.Sections" Collapsed="true">
+    <Position X="31.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\group\Sections.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moxiecode.Manager.Plugins.TemplatePlugin" Collapsed="true">
+    <Position X="63.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAABAQEAAACAAAQAAAQAAAAIQABAAApADAAAA=</HashCode>
+      <FileName>view\js\tinymce\plugins\filemanager\plugins\_Template\src\csharp\TemplatePlugin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.master.Admin" Collapsed="true">
+    <Position X="54.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAAKAAAA=</HashCode>
+      <FileName>view\master\Admin.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.master.Default" Collapsed="true">
+    <Position X="56.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAAAAAKAAAA=</HashCode>
+      <FileName>view\master\Default.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.menu.Edit" Collapsed="true">
+    <Position X="47.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\menu\Edit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.news.List" Collapsed="true">
+    <Position X="65" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\news\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.news.New" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\news\New.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.publication.List" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\publication\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.publication.New" Collapsed="true">
+    <Position X="16" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\publication\New.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.publication.NewsEdition" Collapsed="true">
+    <Position X="18.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\publication\NewsEdition.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.publication.PopUp" Collapsed="true">
+    <Position X="20.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\publication\PopUp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.recuperacion.Edit" Collapsed="true">
+    <Position X="27.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\recuperacion\Edit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.recuperacion.FriendlyList" Collapsed="true">
+    <Position X="34" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\recuperacion\FriendlyList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.recuperacion.FriendlyShow" Collapsed="true">
+    <Position X="36.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\recuperacion\FriendlyShow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.recuperacion.List" Collapsed="true">
+    <Position X="66.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\recuperacion\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.section.List" Collapsed="true">
+    <Position X="43" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\section\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.section.New" Collapsed="true">
+    <Position X="49.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\section\New.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.section.PopUp" Collapsed="true">
+    <Position X="52" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\section\PopUp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.user.List" Collapsed="true">
+    <Position X="68.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\user\List.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.user.New" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>view\user\New.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.AnnounceWidget" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAABAAAAQAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\AnnounceWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.CounterWidget" Collapsed="true">
+    <Position X="2.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAQAAQAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\CounterWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.MapWidget" Collapsed="true">
+    <Position X="5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\MapWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.ModificationWidget" Collapsed="true">
+    <Position X="7.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAQAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\ModificationWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.NewsWidget" Collapsed="true">
+    <Position X="9.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgAAAAAAABAAAAAAAAAAAASAAACAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\NewsWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.RecuperacionWidget" Collapsed="true">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAIAAAAAAAAAAAQAAAAAAAIAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\RecuperacionWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.VideoWidget" Collapsed="true">
+    <Position X="14" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAABAAAAQAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\VideoWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.view.widgets.ui.WidgetTemplates" Collapsed="true">
+    <Position X="63.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAABEBAAAQAACAAQAIgAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.widgets.ui.BaseWidget" Collapsed="true">
+    <Position X="7.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>view\widgets\ui\BaseWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.widgets.WidgetConfigurationParamVO" Collapsed="true">
+    <Position X="56.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>widgets\WidgetConfigurationParamVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.widgets.WidgetConfigurationVO" Collapsed="true">
+    <Position X="58" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAYCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>widgets\WidgetConfigurationVO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.widgets.WidgetParser" Collapsed="true">
+    <Position X="59.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAQAAAAAAgBAAAAAFAAAKAAAAAAAAACAAAAA=</HashCode>
+      <FileName>widgets\WidgetParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="asf.cms.widgets.WidgetParseResult" Collapsed="true">
+    <Position X="61.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>widgets\WidgetParseResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="asf.cms.util.IJsonable" Collapsed="true">
+    <Position X="54.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>util\IJsonable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="asf.cms.widgets.WidgetNames" Collapsed="true">
+    <Position X="54.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAAAAAAAAAAAAIgCAAAAAAAAAAEAAAAAAAABAAA=</HashCode>
+      <FileName>widgets\WidgetConfigurationVO.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

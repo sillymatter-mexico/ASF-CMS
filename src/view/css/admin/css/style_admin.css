@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ************************************* */
+/* ************ GENERAL HTML *********** */
+/* ************************************* */
+
+html{
+	height:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+body{
+	background:url(../assets/fondo_body.png);
+	height:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+div{
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+/* ************************************* */
+/* *********** HEADER SECTION ********** */
+/* ************************************* */
+
+.header{
+	padding:20px;
+}
+
+/* LOGO */
+
+.header .logo{
+	display:inline-block;
+	background:url(../assets/logo.png) no-repeat;
+	width:169px;
+	height:52px;
+}
+
+/* CONTROL */
+
+.header .control{
+	display:inline-block;
+	float:right;
+	font-size:13px;
+	margin-right:20px;
+	border:2px #AAAAAA solid;
+	border-top:0px;
+	padding:5px;
+	background:#CCCCCC;
+	position:relative;
+	top:-20px;
+}
+
+.header .control ul{
+margin:2px;
+padding:5px;
+}
+
+.header .control li{
+	display:block;
+	font-size:11px;
+}
+
+/* ************************************* */
+/* ********** CONTENT SECTION ********** */
+/* ************************************* */
+
+.content{
+
+}
+
+/* TABS */
+
+.content .tabs{
+	position:relative;
+	z-index:2;
+}
+
+.content .tabs ul{
+	margin:0px;
+	border:0px;
+	position:inherit;
+	z-index:inherit;
+}
+
+.content .tabs ul li{
+	display:inline-block;
+	border:2px #AAAAAA solid;
+	padding:2px 6px 2px 6px;
+	background:#CCCCCC;
+	position:inherit;
+	z-index:inherit;
+	font-size:11px;
+}
+
+.content .tabs ul li.active{
+	background:#FFFFFF;
+	border-bottom:2px #FFFFFF solid;
+	position:inherit;
+	z-index:inherit;
+}
+
+.content .tabs li.disabled{
+	color:#7f7f7f;
+	background:#CCCCCC;
+}
+
+/* WORKAREA */
+
+.content .workarea{
+	background:#FFFFFF;
+	margin:0px 20px 10px 20px;
+	border:2px #AAAAAA solid;
+	padding:10px;
+	position:relative;
+	z-index:1;
+	top:-2px;
+	
+}
+
+/* ************************************* */
+/* *********** FOOTER SECTION ********** */
+/* ************************************* */
+
+.footer{
+	color:#AAAAAA;
+	font-size:10px;
+	text-align:center;
+}

@@ -1,0 +1,611 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="asf.cms.view.master.Default" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="asf.cms.bll" %>
+<%@ Import Namespace="asf.cms.controller" %>
+
+<%
+    List<MetaItem> metaList = GetRequestVar("meta") != null ? (List<MetaItem>)GetRequestVar("meta") : new List<MetaItem>();
+    asf.cms.bll.Menu menuInferior = GetRequestVar("menu_inferior") as asf.cms.bll.Menu;
+    int mailCharLimit = 100;
+    int.TryParse(ConfigurationManager.AppSettings.Get("SMTPUserCharLimit"), out mailCharLimit);
+%>
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ASF</title>
+
+    <link rel="icon" href="/view/favicon.ico">
+    <meta http-equiv="Content-Type" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="/view/css/e19extras.css" rel="stylesheet" type="text/css">
+    <link href="/view/css/e19/style.css" rel="stylesheet" type="text/css">
+
+
+    <script src="/view/js/jquery/jquery.js" type="text/javascript"></script>
+    <script src="/view/js/jquery/scroll.js" type="text/javascript"></script>
+    <!--
+    <link rel="stylesheet" href="/view/js/e19/bxslider/jquery.bxslider.min.css" type="text/css">
+    <script src="/view/js/e19/bxslider/jquery.bxslider.min.js" type="text/javascript"></script>
+
+    <script  src="/jsondir4.txt"></script>
+    <script  src="/jsondir4.js"></script>
+    -->
+    <script src="/view/js/e19/slidersup/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
+
+    <script src="/view/js/sendmail.js" type="text/javascript"></script>
+    <script src="/view/js/linkCapture.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="/view/js/e19/slick/slick.css"> 
+    <link rel="stylesheet" href="/view/js/e19/slick/slick-theme.css">
+    <link href="/view/css/e19/jquery_ui.css" rel="stylesheet" type="text/css">
+
+
+
+    <script src="/view/js/e19/slick/slick.js"></script>
+
+    <script src="/view/js/jquery/jquery-ui.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29361180-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+    <script>
+        var mailMaxChars = <%=mailCharLimit%>;
+    </script>
+    <script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $(".back-to-top").on('click', function (event) {
+            var scr = $(window).scrollTop() * 1.1;
+            var tope = 2000;
+
+            if (scr > tope) { scr = tope; }
+
+            $("html, body").animate({ scrollTop: 0 }, scr);
+            return false;
+
+        });
+    });
+    </script>
+
+    <script type="text/javascript">
+
+
+
+function showhide(id)
+	{
+		var itm = null;
+		if (document.getElementById) {
+			itm = document.getElementById(id);
+		} else if (document.all){
+			itm = document.all[id];
+		} else if (document.layers){
+			itm = document.layers[id];
+		}
+		if (itm.style) {
+			if (itm.style.display == "none") { itm.style.display = ""; }
+			else { itm.style.display = "none"; }
+		}
+	}
+
+function showhidec(id)
+	{
+		var itm = null;
+		if (document.getElementById) {
+			itm = document.getElementById(id);
+		} else if (document.all){
+			itm = document.all[id];
+		} else if (document.layers){
+			itm = document.layers[id];
+		}
+		if (itm.style) {
+			if (itm.style.display == "none") { 
+                              itm.style.display = "";
+                               $(".imgpregfrec").attr("src","http://contador.asf.gob.mx/numero.aspx?id="+id );
+ }
+			else { itm.style.display = "none"; }
+		}
+	}
+
+
+
+
+        $(function () {
+            $(".Tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+            $(".Tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+        });
+
+
+    $(document).ready(function () {
+
+        var amountScrolled = 300;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').css('display', 'block');
+                //  $('a.back-to-top').animate({height: "52px", width:"52px", right:"40", bottom:"70"});
+                //       $('a.back-to-top').css({'height': '52px', 'width':'52px'});
+
+            } else {
+
+                // $('a.back-to-top').animate({height: "1px", width:"1px", right:"0", bottom:"15"   });
+                //            $('a.back-to-top').fadeOut();
+                $('a.back-to-top').css('display', 'none');
+            }
+        });
+    });
+
+    $(document).ready(function () {
+
+
+
+
+        $('#bannerlinks').slick({
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1850,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 1500,
+                    }
+                }
+            ]
+
+        });
+
+        $('#FichasOpiniondet').slick({
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 9000,
+            responsive: [
+                {
+                    breakpoint: 1850,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 1100,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 1500,
+                    }
+                }
+            ]
+
+        });
+
+    });
+    </script>
+
+    <script type="text/javascript">
+        jssor_1_slider_init = function () {
+
+
+            var jssor_1_SlideshowTransitions = [
+            { $Duration: 6000, $Opacity: 1 }
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: jssor_1_SlideshowTransitions,
+                    $TransitionsOrder: 1
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1150;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    
+<script>
+$(document).ready(function(){ 
+// myFunction();
+
+   var loc = window.location;
+   var ancho = $(window).width();
+            if (loc.pathname.lastIndexOf('Index') > 0) {      //Home sin menú
+
+                  $("#contenido").css('top', '-63px');
+            }
+
+  if (loc.pathname.lastIndexOf('Index') > 0  && ancho >500) {      //Home sin menú
+                  $("#nav").css('display', 'none');
+               
+            }
+
+  if (loc.pathname.lastIndexOf('Index') > 0  && ancho <501) {      //Home sin menú
+                  $("#nav").css('display', 'block');
+                  $("#contenido").css('top', '-59px');
+                  
+            }
+
+
+
+});
+  </script>
+
+<script>
+$(document).ready(function(){ 
+
+   var loc = window.location;
+            if (loc.pathname.lastIndexOf('219_Igualdad_de_Genero') > 0) {      //Home sin menú
+
+var cc= '';
+cc= cc + '<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1150px; height: 380px; overflow: hidden; visibility: hidden;">';
+cc= cc + '<div data-u="loading" class="jssorl-009-spin" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0,0,0,0.7);">';
+cc= cc + '<img style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/spin.svg" /></div>';
+cc= cc + '<div id ="ban1cont" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1150px; height: 380px; overflow: hidden;">';
+
+
+var dd= '';
+dd= dd + '</div><div data-u="navigator" class="jssorb051" style="position: absolute; bottom: 12px; right: 12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">';
+dd= dd + '<div data-u="prototype" class="i" style="width: 16px; height: 16px;"><svg viewbox="0 0 16000 16000" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">';
+dd= dd + '<circle class="b" cx="8000" cy="8000" r="5800"></circle></svg></div></div>';
+dd= dd + '<div data-u="arrowleft" class="jssora051" style="width: 55px; height: 55px; top: 0px; left: 25px; border-radius: 50% 50% 50% 50%; ';
+dd= dd + 'background: transparent url(@@/view/assets/imagenes/iconos/flecha-izquierda.png@@)  center center;" ';
+dd= dd + 'data-autocenter="2" data-scale="0.75" data-scale-left="0.75"></div> ';
+dd= dd + '<div data-u="arrowright" class="jssora051" style="width: 55px; height: 55px; top: 0px; right: 25px; border-radius: 50% 50% 50% 50%; ';
+dd= dd + 'background: transparent url(@@/view/assets/imagenes/iconos/flecha-derecha.png@@) center center;" ';
+dd= dd + 'data-autocenter="2" data-scale="0.75" data-scale-right="0.75"></div></div>';
+
+
+
+
+
+var ee =  $("#691_Banner_igualdad").html();
+
+
+$("#691_Banner_igualdad").empty();
+//  
+
+
+
+
+
+
+
+$("#691_Banner_igualdad").append(cc + ee + dd.replace("@@","'").replace("@@","'").replace("@@","'").replace("@@","'")  );
+
+
+
+jssor_1_slider_init();
+
+}
+
+});
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <asp:ContentPlaceHolder ID="HeadScriptsContent" runat="server"></asp:ContentPlaceHolder>
+  </head>
+<body>
+  <!-- HEADER INICIA -->
+  <div id="head">
+
+
+  <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav id="nav">
+      <ul>
+        <span class="pnoli">
+          <a class="noli" href="/Default/Index" title="Inicio">
+            <img alt="" src="/view/assets/imagenes/iconos/home_d.png"></a>
+          <a class="noli" href="/Section/50_Transparencia" title="Transparencia">
+            <img alt="" src="/view/assets/imagenes/iconos/inai_D.png"></a>
+          <a class="noli" href="/Section/58_Informes_de_auditoria" title="Informes">
+            <img alt="" src="/view/assets/imagenes/iconos/informes_d.png"></a>
+          <a class="noli msg" href="#" title="Contacto">
+            <img alt="" src="/view/assets/imagenes/iconos/correo_d.png"></a>
+          <a class="noli" href="/Section/210_Directorio" title="Directorio">
+            <img alt="" src="/view/assets/imagenes/iconos/telefono_D.png"></a>
+          <a class="noli" href="/Section/211_Busqueda" title="B&uacute;squeda">
+            <img alt="" src="/view/assets/imagenes/iconos/lupa_d.png"></a>
+        </span>
+
+
+ <asp:ContentPlaceHolder ID="HeaderContent" runat="server"></asp:ContentPlaceHolder>
+
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+  </header>
+
+
+
+
+
+    <div id="header">
+
+      <div id="logo">
+        <table style="width:1150px; width:100%;  ">
+          <tbody>
+            <tr>
+              <td style="width:80px">
+                <a href="/Default/Index">
+                  <img id="imglogo" src="/view/assets/imagenes/iconos/logo.png">
+                </a>
+              </td>
+              <td class="asf" >
+                AUDITOR&Iacute;A SUPERIOR DE LA FEDERACI&Oacute;N
+              </td>
+              <td>
+                <div id="links">
+                  <a class="noli" href="/Default/Index" title="Inicio">
+                    <img alt="" src="/view/assets/imagenes/iconos/home.png">
+                  </a>
+                  <a class="noli" href="/Section/50_Transparencia">
+                    <img alt="" src="/view/assets/imagenes/iconos/inai.png" title="Transparencia">
+                  </a>
+                  <a class="noli" href="/Section/58_Informes_de_auditoria">
+                    <img alt="" src="/view/assets/imagenes/iconos/informes.png" title="Informes">
+                  </a>
+                  <a class="noli msg" href="#">
+                    <img alt="" src="/view/assets/imagenes/iconos/correo.png" title="Contacto">
+                  </a>
+                  <a class="noli" href="/Section/210_Directorio">
+                    <img alt="" src="/view/assets/imagenes/iconos/telefono.png" title="Directorio">
+                  </a>
+                  <a class="noli" href="/Section/211_Busqueda">
+                    <img alt="" src="/view/assets/imagenes/iconos/lupa.png" title="B&uacute;squeda">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <div id="banRedes">					
+                  <input type="checkbox" id="nav-toggle2" class="nav-toggle2">
+                    <nav id="navredes">
+                      <ul>
+                        <p>                              
+                          <a class="nolxi" href="https://www.facebook.com/AuditoriaSuperiordelaFederacion/" target="_blank"><img class="RS" src="/view/assets/imagenes/iconos/fb.png"></a>
+                        </p>
+                        <p>
+                          <a class="nolxi" href="https://twitter.com/ASF_Mexico" target="_blank"><img class="RS" src="/view/assets/imagenes/iconos/tw.png"></a>
+                        </p>                                
+                        <p>
+                          <a class="nolxi" href="https://www.youtube.com/user/asf001230" target="_blank"><img class="RS" src="/view/assets/imagenes/iconos/yt.png"></a>
+                        </p>
+                        <p>
+                          <a class="nolxi" href="http://www.blog-asf.gob.mx/" target="_blank"><img class="RS" src="/view/assets/imagenes/iconos/wp.png"></a>
+                        </p>
+                        <p>
+                          <a class="nolxi" href="https://www.instagram.com/auditoria_superior/" target="_blank"><img class="RS" src="/view/assets/imagenes/iconos/ins.png"></a>
+                        </p>
+                      </ul>
+                    </nav>
+                  <label for="nav-toggle2" class="nav-toggle-label2">
+                    <img class="RS" src="/view/assets/imagenes/iconos/redes.png">
+                    <span></span>
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+   
+
+  </div>
+
+
+  <!-- HEADER TERMINA -->
+  <div id="contenido">
+    <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
+  
+      <!-- FOOTER INICIA -->
+      <div id="SitInteres" style="display: none;" class="fondo1">
+        <table style="color: white; font-size: 12px; max-width: 1150px; width: 90%; text-align: center; margin-left: auto; margin-right: auto;">
+          <tr>
+            <td class="lnk2"><a href="www.asfdatos.gob.mx">Sistema Público de Consulta de Auditorías </a></td>
+            <td class="lnk2"><a href="http://www.diputados.gob.mx/">Cámara de Diputados  </a></td>
+            <td class="lnk2"><a href="http://www5.diputados.gob.mx/index.php/camara/Comision-de-Vigilancia-de-la-Auditoria-Superior-de-la-Federacion2">Comisión de Vigilancia ASF  </a></td>
+            <td class="lnk2"><a href="http://sna.org.mx/">Sistema Nacional Anticorrupción</a></td>
+            <td class="lnk2"><a href="http://www.snt.org.mx/">Sistema Nacional de Transparencia  </a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Apps" class="fondo6">
+        <table style="width: 98%; max-width: 400px; margin-left: auto; margin-right: auto; padding: 0px;">
+          <tr>
+            <td>
+              <div class="Qr">
+                <img src="/view/assets/imagenes/iconos/celular.png" alt="" />
+              </div>
+            </td>
+            <td style="color: #AC9C63;">
+              <div class="Qr">App Ciudadana</div>
+            </td>
+            <td>
+              <a href="https://play.google.com/store/apps/details?id=com.selbor.asf3882" target="_blank">
+                <img class="img_mas_consul" src="/view/assets/imagenes/iconos/android.png" title="Android" />
+              </a>
+            </td>
+            <td>
+              <a href="https://itunes.apple.com/mx/app/app-ciudadana-asf/id1450877663?l=es&amp;ls=1&amp;mt=8" target="_blank">
+                <img class="img_mas_consul" src="/view/assets/imagenes/iconos/apple.png" title="iOS" />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Footer" class="fondo7">
+        <div id="direccion" class="flex">
+          <div id="logofooter" class="child">
+            <img class="img_mas_consul" src="/view/assets/imagenes/iconos/logo.png" alt="" />
+          </div>
+          <div class="child">
+            <p>Carretera Picacho Ajusco No. 167,
+              <br>
+              Col. Ampliación Fuentes del Pedregal,
+              <br>
+              Alcaldía Tlalpan,
+              <br>
+              C.P. 14110, Ciudad de México</p>
+          </div>
+          <div class="child0">
+            <p class="separador"></p>
+          </div>
+          <div class="child">
+            <table style="color: white; width: 100%; padding-left: 10px;">
+            <%
+              foreach (asf.cms.bll.MenuItem sec in menuInferior.Items)
+              {
+            %>
+            <tr>
+              <td class="lnk"> <a href="<%=sec.Section.GetLink() %>" ><%=sec.Section.Title %></a></td>
+            </tr>
+            <%
+              }
+            %>
+            </table>
+          </div>
+          <div class="child">
+            <table style="color: white; width: 100%; padding-left: 10px; text-align: center;">
+              <tr>
+                <td><img class="lnkvisitas" src="/view/assets/imagenes/iconos/ojo.png"><%=Section.GetGlobalViews() %></td>
+              </tr>
+              <tr>
+                <td>&nbsp
+                </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Fecha de Modificación </td>
+              </tr>
+              <tr>
+                <td style="text-align: center;"><%=Publication.GetLastUpdateDate().ToString("dd/MM/yyyy") %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--FOOTER FIN-->
+  </div>
+
+  <a href="#" class="back-to-top">Subir</a>
+
+  <style>
+    #twitter-widget-0 {
+        width: 1150px;
+    }
+  </style>
+
+  <!-- EXTRA -->
+  <div id="msgPanel">
+    <div id="msgForm">
+      <div>
+          Correo: <input type="text" id="msgFromInput" />
+      </div>
+      <div>
+          Mensaje:
+          <textarea id="msgContentInput">
+
+          </textarea>
+          <p>
+            <span id="msgCharsCur">0</span> / <span id="msgCharsMax">0</span>
+          </p>
+      </div>
+      <div>
+          <button id="msgSendBtn">Enviar</button>
+          <button id="msgCancelBtn">Cancelar</button>
+      </div>
+    </div>
+    <div id="msgInfo">
+        <p id="msgMessage"></p>
+        <button id="msgCloseInfoBtn">Cancelar</button>
+    </div>
+  </div>
+</body>
+</html>

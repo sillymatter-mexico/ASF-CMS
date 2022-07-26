@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Patch for IE6 Document */
+
+.header .logo{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/logo.png');
+	display:inline;
+	background:none no-repeat;
+}
+
+.header .control{
+	display:inline;
+	float:right;
+	font-size:13px;
+	margin-right:20px;
+	border:2px #AAAAAA solid;
+	border-top:0px;
+	padding:5px;
+	background:#CCCCCC;
+	position:relative;
+	top:-20px;
+}
+
+.header .control ul{
+margin:2px;
+padding:5px;
+}
+
+.header .control li{
+	display:block;
+	font-size:11px;
+}

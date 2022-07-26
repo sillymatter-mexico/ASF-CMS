@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.AuditSectorVO" table="audit_sector">
+
+    <id name="Id">
+      <column name="id" sql-type="int(11)" not-null="true"/>
+      <generator class="identity" />
+    </id>
+   
+    <property name="AsfKey">
+      <column name="asf_key"/>
+    </property>
+    <property name="Name">
+      <column name="name"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,1873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7992867E-9456-4891-91EE-7905B2CD24C6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>asf.cms</RootNamespace>
+    <AssemblyName>cmsDemo</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <IncludeIisSettings>true</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>mappings\NewsVO.hbm.xml</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\lib\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73" />
+    <Reference Include="Intelligencia.UrlRewriter">
+      <HintPath>..\lib\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy, Version=1.0.3.14911, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MCFileManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c114de2336f6c73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MCFileManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MCImageManager">
+      <HintPath>..\lib\MCImageManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MCManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6be35de8e27c276" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>..\lib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\20211224_asf_cms_accessTable.sql" />
+    <Content Include="Global.asax" />
+    <EmbeddedResource Include="mappings\FileVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\LanguageVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\MenuVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\PublicationVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\SectionVO.hbm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\SectionHasMenuVO.hbm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\SectionLabelVO.hbm.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\UserVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\NewsVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\EspecialesVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\PublicationLinkAccessVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\PublicationLinkAccessResultVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="mappings\SessionVO.hbm.xml" />
+    <EmbeddedResource Include="mappings\ModificationLogVO.hbm.xml" />
+    <Content Include="view\css\admin\admin_extra_v3.css" />
+    <Content Include="view\css\e19extras.css" />
+    <Content Include="view\css\e19\jquery_ui.css" />
+    <Content Include="view\css\e19\Style resp.css" />
+    <Content Include="view\css\e19\Style.css" />
+    <Content Include="view\Default.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\especiales\List.aspx" />
+    <Content Include="view\especiales\New.aspx" />
+    <Content Include="view\especiales\NewsEdition.aspx" />
+    <Content Include="view\especiales\PopUp.aspx" />
+    <Content Include="view\js\admin\v3\commons3.js" />
+    <Content Include="view\js\admin\v3\Labels.js" />
+    <Content Include="view\js\admin\v3\SimpleDialogBox.js" />
+    <Content Include="view\js\admin\v3\log\ModificationLog.js" />
+    <Content Include="view\js\admin\v3\ResultMessages.js" />
+    <Content Include="view\js\admin\v3\SidebarMenuClone.js" />
+    <Content Include="view\js\default.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\e19\bxslider\images\bx_loader.gif" />
+    <Content Include="view\js\e19\bxslider\images\controls.png" />
+    <Content Include="view\js\e19\bxslider\jquery.bxslider.css" />
+    <Content Include="view\js\e19\bxslider\jquery.bxslider.js" />
+    <Content Include="view\js\e19\bxslider\jquery.bxslider.min.css" />
+    <Content Include="view\js\e19\bxslider\jquery.bxslider.min.js" />
+    <Content Include="view\js\e19\bxslider\vendor\jquery.easing.1.3.js" />
+    <Content Include="view\js\e19\bxslider\vendor\jquery.fitvids.js" />
+    <Content Include="view\js\e19\jsondir.js" />
+    <Content Include="view\js\e19\jsondir.txt" />
+    <Content Include="view\js\e19\jsontwitter.js" />
+    <Content Include="view\js\e19\slick\ajax-loader.gif" />
+    <Content Include="view\js\e19\slick\fonts\slick.svg" />
+    <Content Include="view\js\e19\slick\slick-theme.css" />
+    <Content Include="view\js\e19\slick\slick.css" />
+    <Content Include="view\js\e19\slick\slick.js" />
+    <Content Include="view\js\e19\slick\slick.min.js" />
+    <Content Include="view\js\e19\sliderSup\jssor.slider-27.5.0.min.js" />
+    <Content Include="view\js\e19\twitter.txt" />
+    <Content Include="view\js\admin\v3\publication\PublicationHistoricEdit.js" />
+    <Content Include="view\js\admin\v3\publication\PublicationNewsEdit.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\jquery\grid\css\ui.jqgrid.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\jquery\grid\js\jquery.jqGrid.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\jquery\jquery-ui.js" />
+    <Content Include="view\js\jquery\jquery.form.js" />
+    <Content Include="view\js\jquery\jquery.formatCurrency.js" />
+    <Content Include="view\js\jquery\jquery.js" />
+    <Content Include="view\js\jquery\jquery.metadata.js" />
+    <Content Include="view\js\jquery\jquery.treeview.js" />
+    <Content Include="view\js\jquery\jquery.validate.js" />
+    <Content Include="view\js\linkCapture.js" />
+    <Content Include="view\js\masterMenu.js" />
+    <Content Include="view\js\admin\v3\news\NewsList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\publication\PublicationSpecialSectionList.js" />
+    <Content Include="view\js\sendmail.js" />
+    <None Include="view\lib\DataTables\i18n\es_mx.json" />
+    <Content Include="view\lib\jquery3.4.1\jquery-3.4.1.min.js" />
+    <Content Include="view\Login.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\log\ModificationLog.aspx" />
+    <Content Include="view\news\List.aspx" />
+    <Content Include="view\news\New.aspx" />
+    <Content Include="view\publicationlinkaccess\PublicationLinkAccessResults.aspx" />
+    <Content Include="view\PublicationView.aspx" />
+    <Content Include="view\sectionSpecial\List.aspx" />
+    <Content Include="view\sectionSpecial\New.aspx" />
+    <Content Include="view\ContentAddModal.ascx" />
+    <Content Include="view\section\List.aspx" />
+    <Content Include="view\SectionView.aspx" />
+    <Content Include="view\lib\semantic\components\accordion.css" />
+    <Content Include="view\lib\semantic\components\accordion.js" />
+    <Content Include="view\lib\semantic\components\accordion.min.css" />
+    <Content Include="view\lib\semantic\components\accordion.min.js" />
+    <Content Include="view\lib\semantic\components\ad.css" />
+    <Content Include="view\lib\semantic\components\ad.min.css" />
+    <Content Include="view\lib\semantic\components\api.js" />
+    <Content Include="view\lib\semantic\components\api.min.js" />
+    <Content Include="view\lib\semantic\components\breadcrumb.css" />
+    <Content Include="view\lib\semantic\components\breadcrumb.min.css" />
+    <Content Include="view\lib\semantic\components\button.css" />
+    <Content Include="view\lib\semantic\components\button.min.css" />
+    <Content Include="view\lib\semantic\components\card.css" />
+    <Content Include="view\lib\semantic\components\card.min.css" />
+    <Content Include="view\lib\semantic\components\checkbox.css" />
+    <Content Include="view\lib\semantic\components\checkbox.js" />
+    <Content Include="view\lib\semantic\components\checkbox.min.css" />
+    <Content Include="view\lib\semantic\components\checkbox.min.js" />
+    <Content Include="view\lib\semantic\components\colorize.js" />
+    <Content Include="view\lib\semantic\components\colorize.min.js" />
+    <Content Include="view\lib\semantic\components\comment.css" />
+    <Content Include="view\lib\semantic\components\comment.min.css" />
+    <Content Include="view\lib\semantic\components\container.css" />
+    <Content Include="view\lib\semantic\components\container.min.css" />
+    <Content Include="view\lib\semantic\components\dimmer.css" />
+    <Content Include="view\lib\semantic\components\dimmer.js" />
+    <Content Include="view\lib\semantic\components\dimmer.min.css" />
+    <Content Include="view\lib\semantic\components\dimmer.min.js" />
+    <Content Include="view\lib\semantic\components\divider.css" />
+    <Content Include="view\lib\semantic\components\divider.min.css" />
+    <Content Include="view\lib\semantic\components\dropdown.css" />
+    <Content Include="view\lib\semantic\components\dropdown.js" />
+    <Content Include="view\lib\semantic\components\dropdown.min.css" />
+    <Content Include="view\lib\semantic\components\dropdown.min.js" />
+    <Content Include="view\lib\semantic\components\embed.css" />
+    <Content Include="view\lib\semantic\components\embed.js" />
+    <Content Include="view\lib\semantic\components\embed.min.css" />
+    <Content Include="view\lib\semantic\components\embed.min.js" />
+    <Content Include="view\lib\semantic\components\feed.css" />
+    <Content Include="view\lib\semantic\components\feed.min.css" />
+    <Content Include="view\lib\semantic\components\flag.css" />
+    <Content Include="view\lib\semantic\components\flag.min.css" />
+    <Content Include="view\lib\semantic\components\form.css" />
+    <Content Include="view\lib\semantic\components\form.js" />
+    <Content Include="view\lib\semantic\components\form.min.css" />
+    <Content Include="view\lib\semantic\components\form.min.js" />
+    <Content Include="view\lib\semantic\components\grid.css" />
+    <Content Include="view\lib\semantic\components\grid.min.css" />
+    <Content Include="view\lib\semantic\components\header.css" />
+    <Content Include="view\lib\semantic\components\header.min.css" />
+    <Content Include="view\lib\semantic\components\icon.css" />
+    <Content Include="view\lib\semantic\components\icon.min.css" />
+    <Content Include="view\lib\semantic\components\image.css" />
+    <Content Include="view\lib\semantic\components\image.min.css" />
+    <Content Include="view\lib\semantic\components\input.css" />
+    <Content Include="view\lib\semantic\components\input.min.css" />
+    <Content Include="view\lib\semantic\components\item.css" />
+    <Content Include="view\lib\semantic\components\item.min.css" />
+    <Content Include="view\lib\semantic\components\label.css" />
+    <Content Include="view\lib\semantic\components\label.min.css" />
+    <Content Include="view\lib\semantic\components\list.css" />
+    <Content Include="view\lib\semantic\components\list.min.css" />
+    <Content Include="view\lib\semantic\components\loader.css" />
+    <Content Include="view\lib\semantic\components\loader.min.css" />
+    <Content Include="view\lib\semantic\components\menu.css" />
+    <Content Include="view\lib\semantic\components\menu.min.css" />
+    <Content Include="view\lib\semantic\components\message.css" />
+    <Content Include="view\lib\semantic\components\message.min.css" />
+    <Content Include="view\lib\semantic\components\modal.css" />
+    <Content Include="view\lib\semantic\components\modal.js" />
+    <Content Include="view\lib\semantic\components\modal.min.css" />
+    <Content Include="view\lib\semantic\components\modal.min.js" />
+    <Content Include="view\lib\semantic\components\nag.css" />
+    <Content Include="view\lib\semantic\components\nag.js" />
+    <Content Include="view\lib\semantic\components\nag.min.css" />
+    <Content Include="view\lib\semantic\components\nag.min.js" />
+    <Content Include="view\lib\semantic\components\placeholder.css" />
+    <Content Include="view\lib\semantic\components\placeholder.min.css" />
+    <Content Include="view\lib\semantic\components\popup.css" />
+    <Content Include="view\lib\semantic\components\popup.js" />
+    <Content Include="view\lib\semantic\components\popup.min.css" />
+    <Content Include="view\lib\semantic\components\popup.min.js" />
+    <Content Include="view\lib\semantic\components\progress.css" />
+    <Content Include="view\lib\semantic\components\progress.js" />
+    <Content Include="view\lib\semantic\components\progress.min.css" />
+    <Content Include="view\lib\semantic\components\progress.min.js" />
+    <Content Include="view\lib\semantic\components\rail.css" />
+    <Content Include="view\lib\semantic\components\rail.min.css" />
+    <Content Include="view\lib\semantic\components\rating.css" />
+    <Content Include="view\lib\semantic\components\rating.js" />
+    <Content Include="view\lib\semantic\components\rating.min.css" />
+    <Content Include="view\lib\semantic\components\rating.min.js" />
+    <Content Include="view\lib\semantic\components\reset.css" />
+    <Content Include="view\lib\semantic\components\reset.min.css" />
+    <Content Include="view\lib\semantic\components\reveal.css" />
+    <Content Include="view\lib\semantic\components\reveal.min.css" />
+    <Content Include="view\lib\semantic\components\search.css" />
+    <Content Include="view\lib\semantic\components\search.js" />
+    <Content Include="view\lib\semantic\components\search.min.css" />
+    <Content Include="view\lib\semantic\components\search.min.js" />
+    <Content Include="view\lib\semantic\components\segment.css" />
+    <Content Include="view\lib\semantic\components\segment.min.css" />
+    <Content Include="view\lib\semantic\components\shape.css" />
+    <Content Include="view\lib\semantic\components\shape.js" />
+    <Content Include="view\lib\semantic\components\shape.min.css" />
+    <Content Include="view\lib\semantic\components\shape.min.js" />
+    <Content Include="view\lib\semantic\components\sidebar.css" />
+    <Content Include="view\lib\semantic\components\sidebar.js" />
+    <Content Include="view\lib\semantic\components\sidebar.min.css" />
+    <Content Include="view\lib\semantic\components\sidebar.min.js" />
+    <Content Include="view\lib\semantic\components\site.css" />
+    <Content Include="view\lib\semantic\components\site.js" />
+    <Content Include="view\lib\semantic\components\site.min.css" />
+    <Content Include="view\lib\semantic\components\site.min.js" />
+    <Content Include="view\lib\semantic\components\state.js" />
+    <Content Include="view\lib\semantic\components\state.min.js" />
+    <Content Include="view\lib\semantic\components\statistic.css" />
+    <Content Include="view\lib\semantic\components\statistic.min.css" />
+    <Content Include="view\lib\semantic\components\step.css" />
+    <Content Include="view\lib\semantic\components\step.min.css" />
+    <Content Include="view\lib\semantic\components\sticky.css" />
+    <Content Include="view\lib\semantic\components\sticky.js" />
+    <Content Include="view\lib\semantic\components\sticky.min.css" />
+    <Content Include="view\lib\semantic\components\sticky.min.js" />
+    <Content Include="view\lib\semantic\components\tab.css" />
+    <Content Include="view\lib\semantic\components\tab.js" />
+    <Content Include="view\lib\semantic\components\tab.min.css" />
+    <Content Include="view\lib\semantic\components\tab.min.js" />
+    <Content Include="view\lib\semantic\components\table.css" />
+    <Content Include="view\lib\semantic\components\table.min.css" />
+    <Content Include="view\lib\semantic\components\transition.css" />
+    <Content Include="view\lib\semantic\components\transition.js" />
+    <Content Include="view\lib\semantic\components\transition.min.css" />
+    <Content Include="view\lib\semantic\components\transition.min.js" />
+    <Content Include="view\lib\semantic\components\video.css" />
+    <Content Include="view\lib\semantic\components\video.js" />
+    <Content Include="view\lib\semantic\components\video.min.css" />
+    <Content Include="view\lib\semantic\components\video.min.js" />
+    <Content Include="view\lib\semantic\components\visibility.js" />
+    <Content Include="view\lib\semantic\components\visibility.min.js" />
+    <Content Include="view\lib\semantic\components\visit.js" />
+    <Content Include="view\lib\semantic\components\visit.min.js" />
+    <Content Include="view\lib\semantic\package.js" />
+    <Content Include="view\lib\semantic\semantic.css" />
+    <Content Include="view\lib\semantic\semantic.js" />
+    <Content Include="view\lib\semantic\semantic.min.css" />
+    <Content Include="view\lib\semantic\semantic.min.js" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\brand-icons.svg" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.svg" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\outline-icons.svg" />
+    <Content Include="view\lib\semantic\themes\default\assets\images\flags.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="view\widgets\ui\WidgetTemplates.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WidgetTemplates.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bll\AuditFinder.cs" />
+    <Compile Include="bll\AuditLoader.cs" />
+    <Compile Include="bll\AuditReport.cs" />
+    <Compile Include="bll\ModificationLogField.cs" />
+    <Compile Include="bll\ModificationLog.cs" />
+    <Compile Include="bll\PublicationLinkAccess.cs" />
+    <Compile Include="controller\AjaxController.cs" />
+    <Compile Include="controller\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bll\Especiales.cs" />
+    <Compile Include="bll\Language.cs" />
+    <Compile Include="bll\Login.cs" />
+    <Compile Include="bll\Menu.cs" />
+    <Compile Include="bll\MenuItem.cs" />
+    <Compile Include="bll\MetaItem.cs" />
+    <Compile Include="bll\News.cs" />
+    <Compile Include="bll\Publication.cs" />
+    <Compile Include="bll\Recuperacion.cs" />
+    <Compile Include="bll\RecuperacionTree.cs" />
+    <Compile Include="bll\SiteContent.cs" />
+    <Compile Include="bll\SectionTreeNode.cs" />
+    <Compile Include="bll\Section.cs" />
+    <Compile Include="bll\SectionTree.cs" />
+    <Compile Include="bll\SortableKeyValue.cs" />
+    <Compile Include="bll\User.cs" />
+    <Compile Include="controller\AuditoriaController.cs" />
+    <Compile Include="controller\AuditReportController.cs" />
+    <Compile Include="controller\ContentElementStruct.cs" />
+    <Compile Include="controller\Controller.cs" />
+    <Compile Include="controller\DefaultController.cs" />
+    <Compile Include="bll\Group.cs" />
+    <Compile Include="controller\FileController.cs" />
+    <Compile Include="controller\HttpHandlerController.cs" />
+    <Compile Include="controller\GroupController.cs" />
+    <Compile Include="controller\LoginController.cs" />
+    <Compile Include="controller\MenuController.cs" />
+    <Compile Include="controller\ModificationLogAdmController.cs" />
+    <Compile Include="controller\NewsAdmController.cs" />
+    <Compile Include="controller\EspecialesAdmController.cs" />
+    <Compile Include="controller\PublicationAdmController.cs" />
+    <Compile Include="controller\EspecialesController.cs" />
+    <Compile Include="controller\PublicationController.cs" />
+    <Compile Include="bll\PublicationFile.cs" />
+    <Compile Include="controller\PublicationLinkAccessAdmController.cs" />
+    <Compile Include="controller\RecuperacionController.cs" />
+    <Compile Include="controller\SectionAdmController.cs" />
+    <Compile Include="controller\SectionController.cs" />
+    <Compile Include="controller\SectionSpecialAdmController.cs" />
+    <Compile Include="controller\UserController.cs" />
+    <Compile Include="dal\AuditDAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dal\AuditEntityDAL.cs" />
+    <Compile Include="dal\AuditReportDAL.cs" />
+    <Compile Include="dal\AuditSectorDAL.cs" />
+    <Compile Include="dal\DAL.cs" />
+    <Compile Include="dal\EspecialesDAL.cs" />
+    <Compile Include="dal\ExcelAuditDAL.cs" />
+    <Compile Include="dal\FileDAL.cs" />
+    <Compile Include="dal\GroupDAL.cs" />
+    <Compile Include="dal\GroupHasSectionDAL.cs" />
+    <Compile Include="dal\GroupHasUserDAL.cs" />
+    <Compile Include="dal\GrupoFuncionalDAL.cs" />
+    <Compile Include="dal\LanguageDAL.cs" />
+    <Compile Include="dal\MenuDAL.cs" />
+    <Compile Include="dal\ModificationLogDAL.cs" />
+    <Compile Include="dal\NewsDAL.cs" />
+    <Compile Include="dal\PublicationDAL.cs" />
+    <Compile Include="dal\PublicationLinkAccessDAL.cs" />
+    <Compile Include="dal\RecuperacionDAL.cs" />
+    <Compile Include="dal\SectionDAL.cs" />
+    <Compile Include="dal\SectionHasMenuDAL.cs" />
+    <Compile Include="dal\SectionLabelDAL.cs" />
+    <Compile Include="dal\UserDAL.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="model\AuditEntityVO.cs" />
+    <Compile Include="model\AuditReportInfo.cs" />
+    <Compile Include="model\AuditReportItem.cs" />
+    <Compile Include="model\AuditReportVO.cs" />
+    <Compile Include="model\AuditResultVO.cs" />
+    <Compile Include="model\AuditSectorVO.cs" />
+    <Compile Include="model\AuditVO.cs" />
+    <Compile Include="model\EspecialesVO.cs" />
+    <Compile Include="model\GrupoFuncionalVO.cs" />
+    <Compile Include="model\ModificationLogVO.cs" />
+    <Compile Include="model\NewsVO.cs" />
+    <Compile Include="model\EspecialesAdminVO.cs" />
+    <Compile Include="model\PublicationLinkAccessIdVO.cs" />
+    <Compile Include="model\PublicationLinkAccessResultVO.cs" />
+    <Compile Include="model\PublicationLinkAccessVO.cs" />
+    <Compile Include="model\RecuperacionVO.cs" />
+    <Compile Include="model\ResponseMessage.cs" />
+    <Compile Include="model\SearchResultVO.cs" />
+    <Compile Include="util\IJsonable.cs" />
+    <Compile Include="util\TreeItem.cs" />
+    <Compile Include="view\admin\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\admin\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\auditReport\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\auditReport\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\auditReport\Indice.aspx.cs">
+      <DependentUpon>Indice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\auditReport\Indice.aspx.designer.cs">
+      <DependentUpon>Indice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\auditReport\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\auditReport\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\audit\ListReports.aspx.cs">
+      <DependentUpon>ListReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\audit\ListReports.aspx.designer.cs">
+      <DependentUpon>ListReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\auditReport\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\auditReport\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\audit\Load.aspx.cs">
+      <DependentUpon>Load.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\audit\Load.aspx.designer.cs">
+      <DependentUpon>Load.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\audit\PreloadReport.aspx.cs">
+      <DependentUpon>PreloadReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\audit\PreloadReport.aspx.designer.cs">
+      <DependentUpon>PreloadReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\audit\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\audit\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\especiales\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\especiales\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\especiales\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\especiales\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\especiales\NewsEdition.aspx.cs">
+      <DependentUpon>NewsEdition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\especiales\NewsEdition.aspx.designer.cs">
+      <DependentUpon>NewsEdition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\especiales\PopUp.aspx.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\especiales\PopUp.aspx.designer.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\log\ModificationLog.aspx.cs">
+      <DependentUpon>ModificationLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\log\ModificationLog.aspx.designer.cs">
+      <DependentUpon>ModificationLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\news\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\news\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\news\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\news\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\publicationlinkaccess\PublicationLinkAccessResults.aspx.cs">
+      <DependentUpon>PublicationLinkAccessResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\publicationlinkaccess\PublicationLinkAccessResults.aspx.designer.cs">
+      <DependentUpon>PublicationLinkAccessResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\PublicationView.aspx.cs">
+      <DependentUpon>PublicationView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\PublicationView.aspx.designer.cs">
+      <DependentUpon>PublicationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\recuperacion\FriendlyList.aspx.cs">
+      <DependentUpon>FriendlyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\recuperacion\FriendlyList.aspx.designer.cs">
+      <DependentUpon>FriendlyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\recuperacion\FriendlyShow.aspx.cs">
+      <DependentUpon>FriendlyShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\recuperacion\FriendlyShow.aspx.designer.cs">
+      <DependentUpon>FriendlyShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\recuperacion\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\recuperacion\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\recuperacion\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\recuperacion\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\sectionSpecial\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\sectionSpecial\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\sectionSpecial\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\sectionSpecial\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\SectionView.aspx.cs">
+      <DependentUpon>SectionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\SectionView.aspx.designer.cs">
+      <DependentUpon>SectionView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\ContentAddModal.ascx.cs">
+      <DependentUpon>ContentAddModal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\ContentAddModal.ascx.designer.cs">
+      <DependentUpon>ContentAddModal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="view\widgets\ui\AuditWidget.cs" />
+    <Compile Include="view\widgets\ui\BaseWidget.cs" />
+    <Compile Include="view\widgets\ui\AnnounceWidget.cs" />
+    <Compile Include="view\widgets\ui\CounterWidget.cs" />
+    <Compile Include="view\widgets\ui\MapWidget.cs" />
+    <Compile Include="view\widgets\ui\ModificationWidget.cs" />
+    <Compile Include="view\widgets\ui\NewsWidget.cs" />
+    <Compile Include="view\widgets\ui\RecuperacionWidget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="view\widgets\ui\VideoWidget.cs" />
+    <Compile Include="view\widgets\ui\WidgetTemplates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WidgetTemplates.resx</DependentUpon>
+    </Compile>
+    <Compile Include="widgets\WidgetConfigurationParamVO.cs" />
+    <Compile Include="widgets\WidgetConfigurationVO.cs" />
+    <Compile Include="widgets\WidgetParser.cs" />
+    <Compile Include="widgets\WidgetParseResult.cs" />
+    <EmbeddedResource Include="handler\ASFHandler.cs" />
+    <Compile Include="helper\NHibernateHelper.cs" />
+    <Compile Include="membership\MySQLMembershipProvider.cs" />
+    <Compile Include="membership\MySQLRoleProvider.cs" />
+    <Compile Include="membership\MySQLSessionProvider.cs" />
+    <Compile Include="model\FileVO.cs" />
+    <Compile Include="model\GroupHasSectionIdVO.cs" />
+    <Compile Include="model\GroupHasSectionVO.cs" />
+    <Compile Include="model\GroupHasUserIdVO.cs" />
+    <Compile Include="model\GroupHasUserVO.cs" />
+    <Compile Include="model\GroupVO.cs" />
+    <Compile Include="model\LanguageVO.cs" />
+    <Compile Include="model\MenuVO.cs" />
+    <Compile Include="model\PublicationAdminVO.cs" />
+    <Compile Include="model\PublicationVO.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="model\SectionHasMenuIdVO.cs" />
+    <Compile Include="model\SectionLabelIdVO.cs" />
+    <Compile Include="model\SectionVO.cs" />
+    <Compile Include="model\SectionHasMenuVO.cs" />
+    <Compile Include="model\SectionLabelVO.cs" />
+    <Compile Include="model\SessionVO.cs" />
+    <Compile Include="model\UserVO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\Encoder.cs" />
+    <Compile Include="util\GridInput.cs" />
+    <Compile Include="util\RowGrid.cs" />
+    <Compile Include="view\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\group\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\group\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\widgets\ui\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\widgets\ui\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\js\tinymce\plugins\filemanager\plugins\_Template\src\csharp\TemplatePlugin.cs" />
+    <Compile Include="view\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="view\master\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\master\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="view\menu\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\menu\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\publication\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\publication\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\publication\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\publication\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\section\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\section\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\section\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\section\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\user\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\user\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view\util.aspx.cs">
+      <DependentUpon>util.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view\util.aspx.designer.cs">
+      <DependentUpon>util.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="view\master\Default.Master">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\publication\New.aspx" />
+    <Content Include="view\section\New.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="view\assets\backg_body.png" />
+    <Content Include="view\assets\dots.png" />
+    <Content Include="view\assets\dots2.png" />
+    <Content Include="view\assets\icon_doc.png" />
+    <Content Include="view\assets\icon_external.png" />
+    <Content Include="view\assets\icon_pdf.png" />
+    <Content Include="view\assets\icon_ppt.png" />
+    <Content Include="view\assets\icon_xls.png" />
+    <Content Include="view\assets\logo.png" />
+    <Content Include="view\css\admin\assets\fondo_body.png" />
+    <Content Include="view\css\admin\assets\logo.png" />
+    <Content Include="view\css\admin\css\style_admin.css" />
+    <Content Include="view\css\jqthemes\smoothness\custom.css" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="view\css\jqthemes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="view\css\style_admin.css" />
+    <Content Include="view\css\style_admin_ie6.css" />
+    <Content Include="view\img\main.png" />
+    <Content Include="view\img\main7.png" />
+    <Content Include="view\img\Mexico.gif" />
+    <Content Include="view\img\MX.gif" />
+    <Content Include="view\img\star.png" />
+    <Content Include="view\img\status1.png" />
+    <Content Include="view\img\status2.png" />
+    <Content Include="view\img\status3.png" />
+    <Content Include="view\img\US.gif" />
+    <Content Include="view\img\us.png" />
+    <Content Include="view\widgets\ui\Index.aspx" />
+    <Content Include="view\js\admin\v3\publication\PublicationEdit.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\section\SectionEdit.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\publication\PublicationList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\tinymce\langs\en.js" />
+    <Content Include="view\js\tinymce\plugins\advhr\css\advhr.css" />
+    <Content Include="view\js\tinymce\plugins\advhr\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\advhr\js\rule.js" />
+    <Content Include="view\js\tinymce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\advhr\rule.htm" />
+    <Content Include="view\js\tinymce\plugins\advimage\css\advimage.css" />
+    <Content Include="view\js\tinymce\plugins\advimage\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\advimage\image.htm" />
+    <Content Include="view\js\tinymce\plugins\advimage\img\sample.gif" />
+    <Content Include="view\js\tinymce\plugins\advimage\js\image.js" />
+    <Content Include="view\js\tinymce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\advlink\css\advlink.css" />
+    <Content Include="view\js\tinymce\plugins\advlink\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\advlink\js\advlink.js" />
+    <Content Include="view\js\tinymce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\advlink\link.htm" />
+    <Content Include="view\js\tinymce\plugins\advlist\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\autosave\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\autosave\langs\en.js" />
+    <Content Include="view\js\tinymce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\directionality\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\emotions\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\emotions\emotions.htm" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="view\js\tinymce\plugins\emotions\js\emotions.js" />
+    <Content Include="view\js\tinymce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\example\dialog.htm" />
+    <Content Include="view\js\tinymce\plugins\example\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\example\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\example\img\example.gif" />
+    <Content Include="view\js\tinymce\plugins\example\js\dialog.js" />
+    <Content Include="view\js\tinymce\plugins\example\langs\en.js" />
+    <Content Include="view\js\tinymce\plugins\example\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\bin\MCFileManager.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\bin\MCManager.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\bin\safe\MCFileManager.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\bin\safe\MCManager.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\changelog.txt" />
+    <Content Include="view\js\tinymce\plugins\filemanager\css\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\docs\license.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\examples.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\moreimages\dogleft.jpg" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\sample.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\teddybear.jpg" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\another_directory\index.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\another_document.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\directory\images\gotmoxie.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\directory\index.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\document.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\files\templates\readme.txt" />
+    <Content Include="view\js\tinymce\plugins\filemanager\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\js\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\js\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\js\mcfilemanager.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\js\mcfilemanager_src.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\language\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\language\fm\download_more.txt" />
+    <Content Include="view\js\tinymce\plugins\filemanager\language\fm\en.xml" />
+    <Content Include="view\js\tinymce\plugins\filemanager\language\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\login_forms_auth.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\login_session_auth.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\createdir.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\createdoc.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\createzip.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\core.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\dialog.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\dropmenu.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\filemanager.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\filetypes.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\forms.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\toolbar.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\css\window_clearlooks2.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\edit.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\alert-small.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\checkbox.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\check_arrow.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\alert_error.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\alert_info.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\alert_warn.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\bottom_left.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\bottom_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\bottom_right.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\button.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\buttons.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\middle_left.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\middle_right.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\statusbar_left.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\statusbar_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\statusbar_resize.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\statusbar_right.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_chromeless_left.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_chromeless_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_chromeless_right.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_left.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_middle_fg.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\top_right.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\clearlooks2\transparent.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\close.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-icon-compress.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-icon-edit.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-icon-newfile.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-icon-newfolder.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-icon-upload.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\dialog-top.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filelist-border.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filelist-headbg.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filelist-headbg2.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\archive.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\document.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\excel.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\exe.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\folder.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\html.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\image.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\movie.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\pdf.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\powerpoint.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\sound.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\swf.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\trash.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\txt.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\unknown.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\up_folder.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\word.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\filetypes\xml.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-bg.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-bg.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-bottom-bg.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-middle-bg.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-small.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder-top-bg.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\folder_big.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\google_gears_logo.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\add.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\category-closed.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\category-open.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\crop.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\help.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\imagemanager.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\newdoc.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\newfolder.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\reload.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\resize.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\revert.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\save.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\settings.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\toggle_selection.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\icons\up.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-botleft.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-delete.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-edit.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-info.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-topleft.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im-topright.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\im.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\insertfile.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\left.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\loading.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\navdesc_bg.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\preview.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\progress.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\right.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\separator.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\sortasc.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\sortdesc.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-cancel.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-default.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-delete.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-grey.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-greyWide.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\submit-wide.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\toolbar.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\transparent.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\img\x.gif" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\index.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\createdir.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\createdoc.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\createzip.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\edit.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\filemanager.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.cleanname.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.dialog.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.dialog.status.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.domutils.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.dropmenu.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.i18n.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.json.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.scrollto.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.sortarray.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.template.ext.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.template.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\jquery\jquery.uri.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\plupload\gears_init.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\plupload\plupload.flash.swf" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\plupload\plupload.full.min.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\upload.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\basemanager.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\domain.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\fixpng.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\gears_init.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\rpc.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\swfobject.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\js\utils\tinymce.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\filemanager\pages\fm\upload.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\CustomInfoExample\bin\CustomInfoExamplePlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\CustomInfoExample\fm_example.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\CustomInfoExample\fm_tinymce_example.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\CustomInfoExample\im_example.html" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\CustomInfoExample\im_tinymce_example.htm" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\ExternalAuthenticator\auth_example.asp" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\ExternalAuthenticator\bin\ExternalAuthenticator.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\ExternalAuthenticator\md5.asp" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Favorites\bin\FavoritesPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Favorites\css\favorites.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Favorites\img\favorites.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Favorites\js\favorites.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Favorites\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\History\bin\HistoryPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\History\css\history.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\History\img\clock.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\History\js\history.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\History\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Uploaded\bin\UploadedPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Uploaded\css\uploaded.css" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Uploaded\img\go-up.png" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Uploaded\js\uploaded.js" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\Uploaded\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\_Template\bin\TemplatePlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\filemanager\readme.txt" />
+    <Content Include="view\js\tinymce\plugins\filemanager\rpc\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\rpc\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\stream\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\filemanager\stream\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="view\js\tinymce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\fullpage\fullpage.htm" />
+    <Content Include="view\js\tinymce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="view\js\tinymce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="view\js\tinymce\plugins\iespell\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\css\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\examples.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\js\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\js\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\js\mcimagemanager.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\js\mcimagemanager_src.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\language\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\language\im\download_more.txt" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\language\im\en.xml" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\language\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\login_forms_auth.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\login_session_auth.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\createdir.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\core.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\dialog.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\dropmenu.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\forms.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\imageeditor.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\imagemanager.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\toolbar.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\view.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\viewmodes.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\css\window_clearlooks2.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\edit.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\flvplayer\flvPlayer.swf" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\act.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\alert-small.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\alert.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\avi.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\check_arrow.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\alert_error.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\alert_info.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\alert_warn.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\bottom_left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\bottom_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\bottom_right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\button.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\buttons.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\middle_left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\middle_right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\statusbar_left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\statusbar_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\statusbar_resize.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\statusbar_right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_chromeless_left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_chromeless_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_chromeless_right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_middle.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_middle_fg.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\top_right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\clearlooks2\transparent.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\close.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\dcr.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\dialog-icon-edit.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\dialog-icon-newfolder.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\dialog-icon-upload.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\dialog-top.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\editimage.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\filelist-border.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\filelist-headbg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\filelist-headbg2.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\first.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\flash.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-bg.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-bg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-bottom-bg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-middle-bg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-small.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder-top-bg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\folder_big.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\gallery.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\google_gears_logo.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\accept.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\add.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\cancel.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\category-closed.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\category-open.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\crop.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\filemanager.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\flip_h.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\flip_v.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\help.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\newdoc.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\newfolder.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\picture_save.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\reload.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\resize.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\revert.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\rotate_ac.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\rotate_c.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\save.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\settings.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\toggle_selection.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\icons\up.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-botleft.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-delete.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-edit.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-info.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-topleft.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im-topright.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\im.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\imageeditor\bg.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\imageeditor\editarea.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\img_generic.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\insertimage.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\last.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\left.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\left.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\left_disabled.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\loading.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\loading_bg.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\navdesc_bg.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\parent_big.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\progress.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\qt.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\right.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\right.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\right_disabled.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\rm.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\selection_corner.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\separator.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-cancel.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-default.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-delete.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-grey.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-greyWide.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\submit-wide.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\textlist.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\toolbar.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\img\transparent.gif" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\index.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\createdir.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\edit.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\imagemanager.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.cleanname.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.cooquery.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.dialog.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.dialog.status.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.domutils.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.dropmenu.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.i18n.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.imageselection.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.imageutils.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.json.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.scrollto.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.template.ext.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.template.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\jquery\jquery.uri.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\plupload\gears_init.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\plupload\plupload.flash.swf" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\plupload\plupload.full.min.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\upload.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\basemanager.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\domain.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\fixpng.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\gears_init.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\rpc.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\swfobject.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\utils\tinymce.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\js\view.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\upload.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\pages\im\view.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\CustomInfoExample\bin\CustomInfoExamplePlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\CustomInfoExample\fm_example.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\CustomInfoExample\fm_tinymce_example.htm" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\CustomInfoExample\im_example.html" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\CustomInfoExample\im_tinymce_example.htm" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\ExternalAuthenticator\auth_example.asp" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\ExternalAuthenticator\bin\ExternalAuthenticator.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\ExternalAuthenticator\md5.asp" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Favorites\bin\FavoritesPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Favorites\css\favorites.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Favorites\img\favorites.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Favorites\js\favorites.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Favorites\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\History\bin\HistoryPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\History\css\history.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\History\img\clock.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\History\js\history.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\History\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Uploaded\bin\UploadedPlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Uploaded\css\uploaded.css" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Uploaded\img\go-up.png" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Uploaded\js\uploaded.js" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\Uploaded\resources.xml" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\plugins\_Template\bin\TemplatePlugin.dll" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\rpc\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\rpc\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\stream\default.aspx" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\stream\index.aspx" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="view\js\tinymce\plugins\inlinepopups\template.htm" />
+    <Content Include="view\js\tinymce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\layer\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\media\css\content.css" />
+    <Content Include="view\js\tinymce\plugins\media\css\media.css" />
+    <Content Include="view\js\tinymce\plugins\media\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\media\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\media\img\flash.gif" />
+    <Content Include="view\js\tinymce\plugins\media\img\flv_player.swf" />
+    <Content Include="view\js\tinymce\plugins\media\img\quicktime.gif" />
+    <Content Include="view\js\tinymce\plugins\media\img\realmedia.gif" />
+    <Content Include="view\js\tinymce\plugins\media\img\shockwave.gif" />
+    <Content Include="view\js\tinymce\plugins\media\img\trans.gif" />
+    <Content Include="view\js\tinymce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="view\js\tinymce\plugins\media\js\embed.js" />
+    <Content Include="view\js\tinymce\plugins\media\js\media.js" />
+    <Content Include="view\js\tinymce\plugins\media\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\media\media.htm" />
+    <Content Include="view\js\tinymce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\pagebreak\css\content.css" />
+    <Content Include="view\js\tinymce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="view\js\tinymce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="view\js\tinymce\plugins\paste\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\paste\js\pastetext.js" />
+    <Content Include="view\js\tinymce\plugins\paste\js\pasteword.js" />
+    <Content Include="view\js\tinymce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\paste\pastetext.htm" />
+    <Content Include="view\js\tinymce\plugins\paste\pasteword.htm" />
+    <Content Include="view\js\tinymce\plugins\preview\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\preview\example.html" />
+    <Content Include="view\js\tinymce\plugins\preview\jscripts\embed.js" />
+    <Content Include="view\js\tinymce\plugins\preview\preview.html" />
+    <Content Include="view\js\tinymce\plugins\print\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\print\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\save\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\save\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="view\js\tinymce\plugins\spellchecker\css\content.css" />
+    <Content Include="view\js\tinymce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="view\js\tinymce\plugins\style\css\props.css" />
+    <Content Include="view\js\tinymce\plugins\style\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\style\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\style\js\props.js" />
+    <Content Include="view\js\tinymce\plugins\style\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\style\props.htm" />
+    <Content Include="view\js\tinymce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\table\cell.htm" />
+    <Content Include="view\js\tinymce\plugins\table\css\cell.css" />
+    <Content Include="view\js\tinymce\plugins\table\css\row.css" />
+    <Content Include="view\js\tinymce\plugins\table\css\table.css" />
+    <Content Include="view\js\tinymce\plugins\table\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\table\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\table\js\cell.js" />
+    <Content Include="view\js\tinymce\plugins\table\js\merge_cells.js" />
+    <Content Include="view\js\tinymce\plugins\table\js\row.js" />
+    <Content Include="view\js\tinymce\plugins\table\js\table.js" />
+    <Content Include="view\js\tinymce\plugins\table\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\table\merge_cells.htm" />
+    <Content Include="view\js\tinymce\plugins\table\row.htm" />
+    <Content Include="view\js\tinymce\plugins\table\table.htm" />
+    <Content Include="view\js\tinymce\plugins\template\blank.htm" />
+    <Content Include="view\js\tinymce\plugins\template\css\template.css" />
+    <Content Include="view\js\tinymce\plugins\template\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\template\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\template\js\template.js" />
+    <Content Include="view\js\tinymce\plugins\template\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\plugins\template\template.htm" />
+    <Content Include="view\js\tinymce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="view\js\tinymce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\themes\advanced\about.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\anchor.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\charmap.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\color_picker.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\editor_template.js" />
+    <Content Include="view\js\tinymce\themes\advanced\editor_template_src.js" />
+    <Content Include="view\js\tinymce\themes\advanced\image.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="view\js\tinymce\themes\advanced\img\icons.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\js\about.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\anchor.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\charmap.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\color_picker.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\image.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\link.js" />
+    <Content Include="view\js\tinymce\themes\advanced\js\source_editor.js" />
+    <Content Include="view\js\tinymce\themes\advanced\langs\en.js" />
+    <Content Include="view\js\tinymce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\themes\advanced\link.htm" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\content.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\default\ui.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="view\js\tinymce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="view\js\tinymce\themes\advanced\source_editor.htm" />
+    <Content Include="view\js\tinymce\themes\simple\editor_template.js" />
+    <Content Include="view\js\tinymce\themes\simple\editor_template_src.js" />
+    <Content Include="view\js\tinymce\themes\simple\img\icons.gif" />
+    <Content Include="view\js\tinymce\themes\simple\langs\en.js" />
+    <Content Include="view\js\tinymce\themes\simple\skins\default\content.css" />
+    <Content Include="view\js\tinymce\themes\simple\skins\default\ui.css" />
+    <Content Include="view\js\tinymce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="view\js\tinymce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="view\js\tinymce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="view\js\tinymce\utils\editable_selects.js" />
+    <Content Include="view\js\tinymce\utils\form_utils.js" />
+    <Content Include="view\js\tinymce\utils\mctabs.js" />
+    <Content Include="view\js\tinymce\utils\validate.js" />
+    <Content Include="view\master\Admin.Master" />
+    <Content Include="view\menu\Edit.aspx" />
+    <Content Include="view\publication\List.aspx" />
+    <Content Include="view\user\List.aspx" />
+    <Content Include="view\util.aspx" />
+    <Content Include="view\util.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\cmsPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\cmsTest.pubxml" />
+    <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
+    <Content Include="view\js\e19\bxslider\LICENSE.md" />
+    <Content Include="view\js\e19\bxslider\README.md" />
+    <Content Include="view\js\e19\slick\config.rb" />
+    <Content Include="view\js\e19\slick\fonts\slick.eot" />
+    <Content Include="view\js\e19\slick\fonts\slick.ttf" />
+    <Content Include="view\js\e19\slick\fonts\slick.woff" />
+    <Content Include="view\js\e19\slick\slick-theme.less" />
+    <Content Include="view\js\e19\slick\slick-theme.scss" />
+    <Content Include="view\js\e19\slick\slick.less" />
+    <Content Include="view\js\e19\slick\slick.scss" />
+    <None Include="view\js\jquery\jquery-autocomplete\todo" />
+    <None Include="view\js\jquery\jstree\_demo\config.php" />
+    <None Include="view\js\jquery\jstree\_demo\server.php" />
+    <None Include="view\js\jquery\jstree\_demo\_dump.sql" />
+    <None Include="view\js\jquery\jstree\_demo\_inc\class.tree.php" />
+    <None Include="view\js\jquery\jstree\_demo\_inc\class._database.php" />
+    <None Include="view\js\jquery\jstree\_demo\_inc\class._database_i.php" />
+    <None Include="view\js\jquery\jstree\_demo\_inc\__mysql_errors.log" />
+    <None Include="view\js\jquery\jstree\_docs\_json_data.json" />
+    <None Include="view\js\jquery\jstree\_docs\_search_data.json" />
+    <None Include="view\js\jquery\jstree\_docs\_search_result.json" />
+    <None Include="view\js\tinymce\plugins\filemanager\css\_cache\fm_core_css.gz" />
+    <None Include="view\js\tinymce\plugins\filemanager\css\_cache\fm_index_css.gz" />
+    <None Include="view\js\tinymce\plugins\filemanager\docs\FileManager_API.chm" />
+    <None Include="view\js\tinymce\plugins\filemanager\docs\Manager_API.chm" />
+    <None Include="view\js\tinymce\plugins\filemanager\js\_cache\fm_core.gz" />
+    <None Include="view\js\tinymce\plugins\filemanager\js\_cache\fm_filemanager.gz" />
+    <None Include="view\js\tinymce\plugins\filemanager\js\_cache\fm_upload.gz" />
+    <None Include="view\js\tinymce\plugins\filemanager\mime.types" />
+    <None Include="view\js\tinymce\plugins\filemanager\pages\fm\js\plupload\plupload.silverlight.xap" />
+    <None Include="view\js\tinymce\plugins\filemanager\plugins\ExternalAuthenticator\auth_example.jsp" />
+    <None Include="view\js\tinymce\plugins\filemanager\plugins\ExternalAuthenticator\auth_example.php" />
+    <EmbeddedResource Include="mappings\GroupVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\GroupHasUserVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\GroupHasSectionVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="bin\Excel.dll" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\MCFileManager.dll" />
+    <Content Include="bin\MCManager.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="cmsDemo.Publish.xml" />
+    <EmbeddedResource Include="mappings\AuditReportVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mappings\AuditVO.hbm.xml" />
+    <EmbeddedResource Include="mappings\RecuperacionVO.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="mappings\AuditSectorVO.hbm.xml" />
+    <Content Include="mappings\GrupoFuncionalVO.hbm.xml" />
+    <Content Include="view\admin\Error.aspx" />
+    <Content Include="view\auditReport\New.aspx" />
+    <Content Include="view\auditReport\Indice.aspx" />
+    <Content Include="view\auditReport\List.aspx" />
+    <Content Include="view\audit\ListReports.aspx" />
+    <Content Include="view\auditReport\Edit.aspx" />
+    <Content Include="view\audit\Load.aspx" />
+    <Content Include="view\audit\PreloadReport.aspx" />
+    <Content Include="view\audit\Search.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\css\admin_extra.css" />
+    <Content Include="view\flash\ASFMiniPlayer.swf" />
+    <Content Include="view\flash\js\swfobject.js" />
+    <Content Include="view\group\List.aspx" />
+    <Content Include="view\img\add.png" />
+    <Content Include="view\img\delete.png" />
+    <Content Include="view\img\folder_explore.png" />
+    <Content Include="view\img\printer.png" />
+    <Content Include="view\img\user_add.png" />
+    <Content Include="view\img\user_delete.png" />
+    <Content Include="view\img\usuarios.png" />
+    <Content Include="view\img\secciones.png" />
+    <Content Include="view\img\mx.png" />
+    <Content Include="view\Index.aspx" />
+    <Content Include="view\js\admin\v3\ContentAdd.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\auditReportList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\auditSearch.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\commons.js" />
+    <Content Include="view\js\admin\v3\publication\PublicationFileEdit.js" />
+    <Content Include="view\js\admin\v3\publication\PublicationMetaEdit.js" />
+    <Content Include="view\js\editRecuperacion.js" />
+    <Content Include="view\js\jquery.jstree.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-ar.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-bg.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-bg1251.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-cat.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-cn.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-cs.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-da.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-de.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-dk.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-el.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-en.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-es.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-fa.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-fi.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-fr.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-gl.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-he.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-hr.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-hr1250.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-hu.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-is.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-it.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-ja.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-lt.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-mne.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-nl.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-no.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-pl.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-pt.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-ro.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-ru.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-sk.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-sr-latin.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-sr.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-sv.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-th.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-tr.js" />
+    <Content Include="view\js\jquery\grid\js\i18n\grid.locale-ua.js" />
+    <Content Include="view\js\jquery\grid\js\jquery-1.7.2.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\jquery\grid\plugins\grid.addons.js" />
+    <Content Include="view\js\jquery\grid\plugins\grid.postext.js" />
+    <Content Include="view\js\jquery\grid\plugins\grid.setcolumns.js" />
+    <Content Include="view\js\jquery\grid\plugins\jquery.contextmenu.js" />
+    <Content Include="view\js\jquery\grid\plugins\jquery.searchFilter.js" />
+    <Content Include="view\js\jquery\grid\plugins\jquery.tablednd.js" />
+    <Content Include="view\js\jquery\grid\plugins\searchFilter.css" />
+    <Content Include="view\js\jquery\grid\plugins\ui.multiselect.css" />
+    <Content Include="view\js\jquery\grid\plugins\ui.multiselect.js" />
+    <Content Include="view\js\jquery\jquery.alphanumeric.pack.js" />
+    <Content Include="view\js\jquery\jquery.blockUI.js" />
+    <Content Include="view\js\jquery\jstree\jquery.jstree.js" />
+    <Content Include="view\js\jquery\jstree\themes\apple\bg.jpg" />
+    <Content Include="view\js\jquery\jstree\themes\apple\d.png" />
+    <Content Include="view\js\jquery\jstree\themes\apple\dot_for_ie.gif" />
+    <Content Include="view\js\jquery\jstree\themes\apple\style.css" />
+    <Content Include="view\js\jquery\jstree\themes\apple\throbber.gif" />
+    <Content Include="view\js\jquery\jstree\themes\classic\d.gif" />
+    <Content Include="view\js\jquery\jstree\themes\classic\d.png" />
+    <Content Include="view\js\jquery\jstree\themes\classic\dot_for_ie.gif" />
+    <Content Include="view\js\jquery\jstree\themes\classic\style.css" />
+    <Content Include="view\js\jquery\jstree\themes\classic\throbber.gif" />
+    <Content Include="view\js\jquery\jstree\themes\default-rtl\d.gif" />
+    <Content Include="view\js\jquery\jstree\themes\default-rtl\d.png" />
+    <Content Include="view\js\jquery\jstree\themes\default-rtl\dots.gif" />
+    <Content Include="view\js\jquery\jstree\themes\default-rtl\style.css" />
+    <Content Include="view\js\jquery\jstree\themes\default-rtl\throbber.gif" />
+    <Content Include="view\js\jquery\jstree\themes\default\d.gif" />
+    <Content Include="view\js\jquery\jstree\themes\default\d.png" />
+    <Content Include="view\js\jquery\jstree\themes\default\style.css" />
+    <Content Include="view\js\jquery\jstree\themes\default\throbber.gif" />
+    <Content Include="view\js\jquery\jstree\_demo\file.png" />
+    <Content Include="view\js\jquery\jstree\_demo\folder.png" />
+    <Content Include="view\js\jquery\jstree\_demo\index.html" />
+    <Content Include="view\js\jquery\jstree\_demo\root.png" />
+    <Content Include="view\js\jquery\jstree\_demo\_install.txt" />
+    <Content Include="view\js\jquery\jstree\_docs\!style.css" />
+    <Content Include="view\js\jquery\jstree\_docs\checkbox.html" />
+    <Content Include="view\js\jquery\jstree\_docs\contextmenu.html" />
+    <Content Include="view\js\jquery\jstree\_docs\cookies.html" />
+    <Content Include="view\js\jquery\jstree\_docs\core.html" />
+    <Content Include="view\js\jquery\jstree\_docs\crrm.html" />
+    <Content Include="view\js\jquery\jstree\_docs\dnd.html" />
+    <Content Include="view\js\jquery\jstree\_docs\hotkeys.html" />
+    <Content Include="view\js\jquery\jstree\_docs\html_data.html" />
+    <Content Include="view\js\jquery\jstree\_docs\index.html" />
+    <Content Include="view\js\jquery\jstree\_docs\json_data.html" />
+    <Content Include="view\js\jquery\jstree\_docs\languages.html" />
+    <Content Include="view\js\jquery\jstree\_docs\logo.png" />
+    <Content Include="view\js\jquery\jstree\_docs\search.html" />
+    <Content Include="view\js\jquery\jstree\_docs\sort.html" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\!script.js" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\!style.css" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\clipboard.swf" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\help.png" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\magnifier.png" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\page_white_code.png" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\page_white_copy.png" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\printer.png" />
+    <Content Include="view\js\jquery\jstree\_docs\syntax\wrapping.png" />
+    <Content Include="view\js\jquery\jstree\_docs\themeroller.html" />
+    <Content Include="view\js\jquery\jstree\_docs\themes.html" />
+    <Content Include="view\js\jquery\jstree\_docs\types.html" />
+    <Content Include="view\js\jquery\jstree\_docs\ui.html" />
+    <Content Include="view\js\jquery\jstree\_docs\unique.html" />
+    <Content Include="view\js\jquery\jstree\_docs\xml_data.html" />
+    <Content Include="view\js\jquery\jstree\_docs\_drive.png" />
+    <Content Include="view\js\jquery\jstree\_docs\_html_data.html" />
+    <Content Include="view\js\jquery\jstree\_docs\_xml_flat.xml" />
+    <Content Include="view\js\jquery\jstree\_docs\_xml_nest.xml" />
+    <Content Include="view\js\jquery\jstree\_lib\jquery.cookie.js" />
+    <Content Include="view\js\jquery\jstree\_lib\jquery.hotkeys.js" />
+    <Content Include="view\js\jquery\jstree\_lib\jquery.js" />
+    <Content Include="view\js\listRecuperacion.js" />
+    <Content Include="view\js\recuperacionList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\editAuditReport.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\menu\MenuEdit.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\group\GroupList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\jquery\jquery-autocomplete\changelog.txt" />
+    <Content Include="view\js\jquery\jquery-autocomplete\jquery.autocomplete.css" />
+    <Content Include="view\js\jquery\jquery-autocomplete\jquery.autocomplete.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\jquery.autocomplete.min.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\jquery.autocomplete.pack.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\lib\jquery.ajaxQueue.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\lib\jquery.bgiframe.min.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\lib\jquery.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\lib\thickbox-compressed.js" />
+    <Content Include="view\js\jquery\jquery-autocomplete\lib\thickbox.css" />
+    <Content Include="view\js\preloadReport.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\search.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\admin\v3\section\SectionList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\showRecuperacion.js" />
+    <Content Include="view\js\tinymce\jquery.tinymce.js" />
+    <Content Include="view\js\tinymce\license.txt" />
+    <Content Include="view\js\tinymce\plugins\filemanager\plugins\_Template\src\vb\TemplatePlugin.vb" />
+    <Content Include="view\js\tinymce\plugins\filemanager\Web.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="view\js\tinymce\plugins\icon_include\css\dialog.css" />
+    <Content Include="view\js\tinymce\plugins\icon_include\dialog.htm" />
+    <Content Include="view\js\tinymce\plugins\icon_include\editor_plugin.js" />
+    <Content Include="view\js\tinymce\plugins\icon_include\editor_plugin_src.js" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\example.gif" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_doc.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_external.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_include.gif" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_pdf.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_ppt.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_xls.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\img\icon_zip.png" />
+    <Content Include="view\js\tinymce\plugins\icon_include\js\dialog.js" />
+    <Content Include="view\js\tinymce\plugins\icon_include\langs\en.js" />
+    <Content Include="view\js\tinymce\plugins\icon_include\langs\en_dlg.js" />
+    <Content Include="view\js\tinymce\tiny_mce.js" />
+    <Content Include="view\js\tinymce\tiny_mce_popup.js" />
+    <Content Include="view\js\tinymce\tiny_mce_src.js" />
+    <Content Include="view\js\admin\v3\user\UserList.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="view\js\tinymce\plugins\filemanager\plugins\_Template\src\csharp\build.bat" />
+    <None Include="view\js\tinymce\plugins\filemanager\plugins\_Template\src\vb\build.bat" />
+    <None Include="view\js\tinymce\plugins\imagemanager\css\_cache\im_core_css.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\css\_cache\im_edit_css.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\js\_cache\im_core.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\js\_cache\im_edit.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\js\_cache\im_imagemanager.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\js\_cache\im_upload.gz" />
+    <None Include="view\js\tinymce\plugins\imagemanager\mime.types" />
+    <None Include="view\js\tinymce\plugins\imagemanager\pages\im\js\plupload\plupload.silverlight.xap" />
+    <None Include="view\js\tinymce\plugins\imagemanager\plugins\ExternalAuthenticator\auth_example.jsp" />
+    <None Include="view\js\tinymce\plugins\imagemanager\plugins\ExternalAuthenticator\auth_example.php" />
+    <Content Include="view\js\tinymce\plugins\imagemanager\Web.Config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="view\js\viewRecuperacion.js" />
+    <Content Include="view\recuperacion\FriendlyList.aspx" />
+    <Content Include="view\recuperacion\FriendlyShow.aspx" />
+    <Content Include="view\recuperacion\List.aspx" />
+    <Content Include="view\recuperacion\Edit.aspx" />
+    <Content Include="view\Search.aspx" />
+    <Content Include="view\lib\semantic\.versions" />
+    <Content Include="view\lib\semantic\LICENSE" />
+    <Content Include="view\lib\semantic\package.json" />
+    <Content Include="view\lib\semantic\README.md" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\brand-icons.eot" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\brand-icons.ttf" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\brand-icons.woff" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\brand-icons.woff2" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.eot" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.otf" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.woff" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\icons.woff2" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\outline-icons.eot" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\outline-icons.ttf" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\outline-icons.woff" />
+    <Content Include="view\lib\semantic\themes\default\assets\fonts\outline-icons.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploads\" />
+    <Folder Include="view\js\jquery\grid\css\images\" />
+    <Folder Include="view\js\jquery\themes\apple\" />
+    <Folder Include="view\js\jquery\themes\classic\" />
+    <Folder Include="view\js\jquery\themes\default-rtl\" />
+    <Folder Include="view\js\jquery\themes\default\" />
+    <Folder Include="view\js\tinymce\plugins\filemanager\logs\" />
+    <Folder Include="view\js\tinymce\plugins\imagemanager\logs\" />
+    <Folder Include="view\js\tinymce\plugins\imagemanager\pages\im\img\manager\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

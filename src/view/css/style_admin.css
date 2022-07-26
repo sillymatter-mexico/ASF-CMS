@@ -1,0 +1,258 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* ************************************* */
+/* ************ GENERAL HTML *********** */
+/* ************************************* */
+
+:root {
+	--content-background: white;
+	--content-color: black;
+
+	--primary-bg-color: #9FB1DB;
+	--primary-el-color: #89A2DB;
+	--primary-en-color: #5B77B7;
+	--primary-di-color: #4E5870;
+	--primary-color: #0A2054;
+
+	--secondary-bg-color: #FFE5B1;
+	--secondary-el-color: #FFDB94;
+	--secondary-en-color: #FFCF70;
+	--secondary-di-color: #9D8B67;
+	--secondary-color: #75520C;
+}
+
+html {
+	height:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	font-family:Arial;
+}
+input
+{
+	font-family:Arial;
+}
+body {
+	/*background:url('../assets/backg_body.png');*/
+    background-color: #AAAAAA;
+	height:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+/*
+div{
+	margin:0px;
+	border:0px;
+	padding:0px;
+}*/
+
+a {
+	text-decoration:none;
+}
+a img {
+	text-decoration:none;
+	border:0px;
+}
+
+/* ************************************* */
+/* *********** HEADER SECTION ********** */
+/* ************************************* */
+
+.header{
+    background-color: var(--secondary-bg-color);
+	padding: 10px 0px 10px 0px;
+    margin-bottom: 20px;
+	height: 65px;
+}
+
+.header .headerContent {
+    margin: auto;
+    max-width:1280px;
+    min-width: 680px;
+	box-sizing: border-box;
+	height: 100%;
+	vertical-align: top;
+}
+
+/* LOGO */
+
+.header .headerContent .logo {
+	display:inline-block;
+	background:url('../assets/logo.png') no-repeat;
+    background-size: contain;
+	background-position: center;
+	width:140px;
+	height:100%;
+}
+
+/* TABS */
+
+.header .headerContent .tabs {
+    display: inline-block;
+	height: 100%;
+	vertical-align: top;
+	white-space: nowrap;
+	font-size: 0px;
+}
+
+
+
+.header .headerContent .tabs div {
+	display: inline-block;
+	background-color: var(--secondary-el-color);
+	padding: 1em 0.6em 1em 0.6em;
+	color: var(--secondary-color);
+	font-weight: bold;
+	border-left: solid 1px var(--secondary-color);
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 12pt;
+}
+
+.header .headerContent .tabs div:first-child {
+	margin-left: 1em;
+}
+
+.header .headerContent .tabs div:hover {
+	background-color: var(--secondary-en-color);
+	color: var(--content-color);
+}
+
+.header .headerContent .tabs div[id^='menu-'] {
+	border: solid 1px var(--secondary-bg-color);
+	position: absolute;
+	z-index: 1000;
+	height: auto;
+	width: auto;
+	display: none;
+}
+
+.header .headerContent .tabs div[id^='menu-'] a {
+	display: block;
+}
+
+.header .headerContent .tabs div a {
+	color: var(--secondary-color);
+}
+
+.header .headerContent .tabs div a:hover {
+	color: var(--content-color);
+}
+
+/* CONTROL */
+
+.header .control {
+	display: inline-block;
+	padding:3px 20px 3px 20px;
+	background:var(--primary-el-color);
+	color:var(--primary-color);
+	font-size:11px;
+	position: relative;
+	right: 0px;
+}
+
+.header .control a {
+	text-decoration:none;
+	color:inherit !important;
+}
+
+/* ************************************* */
+/* ********** CONTENT SECTION ********** */
+/* ************************************* */
+
+.content{
+}
+
+
+
+/* WORKAREA */
+
+.content .workarea{
+	background:#FFFFFF;
+	margin:0px 20px 0px 20px;
+	border:0px #AAAAAA solid;
+	padding:5px 10px 10px 10px;
+	position:relative;
+	font-size:12px;
+	z-index:1;
+}
+
+.content .workarea h1 {
+	font-size:25px;
+	color:#112F5A;
+}
+
+/* WORKAREA */
+.content .workarea .toolbar{
+	padding:3px 10px 3px 10px;
+	
+	color:#000000;
+	text-align:right;
+	font-size:11px;
+}
+
+.content .workarea .toolbar ul{
+	display:inline;
+	list-style:none;
+}
+
+.content .workarea .toolbar ul li{
+	float:right;
+	padding:2px 8px 2px 8px;
+	background:#9C2A29;
+	color:#AAAAAA;
+}
+
+.content .workarea .toolbar ul li:hover{
+	background:#CC0000;
+}
+input.readonly
+{
+	background-color:#EFEFEF;
+	color:#333333;
+}
+/* LOGIN */
+
+.content .workarea .login{
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* ************************************* */
+/* *********** FOOTER SECTION ********** */
+/* ************************************* */
+
+.footer{
+	margin-top:10px;
+	color:#AAAAAA;
+	font-size:10px;
+	text-align:center;
+}
+
+.footer a{
+	color:#AAAAAA;
+}
+
+.footer a:hover{
+	color:#FFFFFF;
+}
+
+
+.oposite_align{
+	text-align:right;
+}
+.ui-jqgrid tr.jqgrow td {
+    word-wrap: break-word; /* IE 5.5+ and CSS3 */
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    overflow: hidden;
+    height: auto;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 3px
+}

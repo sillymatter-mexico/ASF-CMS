@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.AuditVO" table="audit">
+
+    <id name="Id">
+      <column name="id" sql-type="int(11)" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Title">
+      <column name="title"/>
+    </property>
+    <property name="FileAnchor">
+      <column name="file_anchor"/>
+    </property>
+    <property name="AuditReportId">
+      <column name="audit_report_id"/>
+    </property>
+    <property name="AuditEntityId">
+      <column name="audit_entity_id"/>
+    </property>
+    <property name="AuditTypeId">
+      <column name="audit_type_id"/>
+    </property>
+    <property name="Code">
+      <column name="code"/>
+    </property>
+    <property name="Number">
+      <column name="number"/>
+    </property>
+    <property name="FilePath">
+      <column name="file_path"/>
+    </property>
+    <property name="FileMime">
+      <column name="file_mime"/>
+    </property>
+    <property name="IndexPosition">
+      <column name="index_position"/>
+    </property>
+  </class>
+</hibernate-mapping>

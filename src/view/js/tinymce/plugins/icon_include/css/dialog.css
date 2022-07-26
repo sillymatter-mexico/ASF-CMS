@@ -1,0 +1,11 @@
+.icon {
+	padding: 2px;
+	border: 1px solid #ffffff;
+	margin: 1px;
+}
+
+.selected {
+	padding: 2px;
+	border: 1px solid #000000;
+	margin: 1px;
+}

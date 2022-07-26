@@ -1,0 +1,2 @@
+ALTER TABLE `asf_cms`.`section` ADD COLUMN `sitemap_exclude` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' AFTER `redirect_options`;
+ALTER TABLE `asf_cms`.`publication` ADD COLUMN `sitemap_exclude` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' AFTER `meta`;

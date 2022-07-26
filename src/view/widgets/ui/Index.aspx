@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="asf.cms.view.widgets.ui.Index" EnableViewStateMac="false" EnableEventValidation="false" EnableViewState="false" ValidateRequest="false" %>

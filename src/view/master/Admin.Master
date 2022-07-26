@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="asf.cms.view.master.Admin" %>
+
+<%@ Import Namespace="asf.cms.bll" %>
+<%@ Import Namespace="asf.cms.model" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+<%
+    UserVO user = null;
+    bool admin= false;
+    bool isUser = false;
+    bool recup = false;
+    string selectedTab=GetRequestVar("selectedTab").ToString();
+    string title = GetRequestVar("pageTitle") != null ? (string)GetRequestVar("pageTitle") : "ASF - Auditoria Superior de la Federación / CMS";
+    string error=GetMessage("error");
+    if (Session["User"] != null)
+    {
+        user   = (UserVO)Session["User"];
+        admin  = user.Type == "ADMIN";
+        isUser = user.Type == "USER";
+        recup  = user.Type == "RECUPERACIONES" || user.Type == "ADMIN";
+    }
+ %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title><%=title %></title>
+	
+	<link rel="stylesheet" type="text/css" href="../view/lib/fomantic-ui-2.8.4/semantic.min.css" />
+    <link rel="stylesheet" type="text/css" href="../view/lib/DataTables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../view/lib/DataTables/Buttons-1.6.0/buttons.dataTables.min.css" />
+	<link rel="stylesheet" type="text/css" href="../view/lib/DataTables/Buttons-1.6.0/buttons.semanticui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../view/css/admin/admin_extra_v3.css" />
+	
+	<script type="text/javascript" src="../view/lib/jquery1.12.4/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		window.jQuery_1_12_4 = $.noConflict(true);
+	</script>
+	
+	<script type="text/javascript" src="../view/lib/jquery3.4.1/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		window.jQuery = window.$ = $.noConflict(true);
+	</script>
+	<script type="text/javascript" src="../view/lib/fomantic-ui-2.8.4/semantic.min.js"></script>
+    <script type="text/javascript" src="../view/lib/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="../view/lib/DataTables/Buttons-1.6.0/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" src="../view/lib/DataTables/Buttons-1.6.0/buttons.semanticui.min.js"></script>
+	<script type="text/javascript" src="../view/js/admin/v3/commons3.js"></script>
+    <script type="text/javascript" src="../view/js/admin/v3/SidebarMenuClone.js"></script>
+	<script type="text/javascript" src="../view/js/admin/v3/SimpleDialogBox.js"></script>
+	<script type="text/javascript" src="../view/js/admin/v3/ResultMessages.js"></script>
+	<script type="text/javascript" src="../view/js/admin/v3/Labels.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+	<div class="ui left vertical menu sidebar">
+		
+	</div>
+	<div class="pusher">
+		<div class="ui menu">
+			<div class="ui container">
+			<div class="item">
+				<img src="../view/assets/logo.png" style="width: auto; height:3em;">
+			</div>
+			<div class="left menu only-desktop">
+				<div class="ui simple dropdown item">
+					Contenido <i class="dropdown icon"></i>
+					<div class="menu">
+						<a class="item" href="../SectionAdm/List">Secciones</a>
+						<a class="item" href="../PublicationAdm/List">Publicaciones</a>
+						<a class="item" href="../SectionSpecialAdm/List">Secciones especiales</a>
+                        <a class="item" href="../NewsAdm/List">Noticias</a>
+					</div>
+				</div>
+                <%
+                    if (recup)
+                    {
+                %>
+				<div class="ui simple dropdown item">
+					Informes <i class="dropdown icon"></i>
+					<div class="menu">
+						<a class="item" href="../AuditReport/List">Auditorias</a>
+						<a class="item" href="../Recuperacion/List">Recuperaciones</a>
+					</div>
+				</div>
+                <%
+                    }
+                    if (admin)
+                    {
+                %>
+				<a class="item" href="../Menu/List" >Menus</a>
+				<div class="ui simple dropdown item">
+					Administracion <i class="dropdown icon"></i>
+					<div class="menu">
+						<a class="item" href="../User/List">Usuarios</a>
+						<a class="item" href="../Group/List">Grupos</a>
+                        <a class="item" href="../ModificationLogAdm/List">Registro de modificaciones</a>
+                        <a class="item" href="../PublicationLinkAccessAdm/List">Registro de acceso a ligas</a>
+					</div>
+				</div>
+                <%
+                    }
+                %>
+			</div>
+			<div class="right menu">
+				<div id="btnUserMenu" class="item">
+					<i class="big icons">
+						<i class="user circle icon"></i>
+						<i class="cog corner icon"></i>
+					</i>
+				</div>
+				<div id="btnSidebar" class="item only-mobile">
+					<i class="bars icon"></i>
+				</div>
+			</div>
+			</div>
+		</div>
+
+        <div id="userMenuPopup" class="ui popup">
+            <div class="ui list">
+                <!--<div class="item">
+                    <i class="user icon"></i>
+                    <div class="content">
+                        <a href="../User/Edit">Cuenta</a>
+                    </div>
+                </div>-->
+                <div class="item">
+                    <i class="user lock icon"></i>
+                    <div class="content">
+                        <a href="../Login/Logout">Salir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div class="ui container">
+            <div id="msgAjaxLoading" style="position:fixed;padding:5px;display:none;width:100%;size:13px" class="ui-state-highlight"> Cargando...</div>
+            <asp:ContentPlaceHolder ID="contenido" runat="server"></asp:ContentPlaceHolder>
+		</div>
+
+	</div>
+
+	<div id="modalSimpleDialog" class="ui mini modal">
+		<div class="header">Título</div>
+		<div class="content">
+			<div class="ui two column grid">
+				<div class="four wide column"><i class="huge icon"></i></div>
+				<div class="twelve wide column"><span>Descripcion de la alerta</span></div>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui deny primary button">Cancelar</div>
+			<div class="ui approve secondary button">Aceptar</div>
+		</div>
+	</div>
+
+	<div id="modalSimpleAlert" class="ui mini modal">
+		<div class="header">Título</div>
+		<div class="content">
+			<div class="ui two column grid">
+				<div class="four wide column"><i class="huge icon"></i></div>
+				<div class="twelve wide column"><span>Descripcion de la alerta</span></div>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui deny primary button">Cerrar</div>
+		</div>
+	</div>
+
+</body>
+</html>

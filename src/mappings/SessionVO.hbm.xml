@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="asf.cms.model" assembly="cmsDemo">
+
+  <class name="asf.cms.model.SessionVO" table="language">
+
+    <id name="Id">
+      <column name="id" sql-type="varchar(80)" not-null="true"/>
+    </id>
+    <property name="Created">
+      <column name="created"/>
+    </property>
+    <property name="Expires">
+      <column name="expires"/>
+    </property>
+    <property name="LockDate">
+      <column name="lock_date"/>
+    </property>
+    <property name="Timeout">
+      <column name="timeout"/>
+    </property>
+    <property name="Locked">
+      <column name="locked"/>
+    </property>
+    <property name="SessionItems">
+      <column name="session_items"/>
+    </property>
+    <property name="Flags">
+      <column name="flags"/>
+    </property>
+  </class>
+</hibernate-mapping>

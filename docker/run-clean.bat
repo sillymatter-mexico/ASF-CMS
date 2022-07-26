@@ -1,0 +1,1 @@
+docker run -e "MYSQL_ROOT_PASSWORD=toor" -d -p 3306:3306 --name "asf-mysql-clean" grugnog/mysql-5.1:latest 
