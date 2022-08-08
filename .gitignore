@@ -25,3 +25,4 @@ src/view/js/tinymce/plugins/filemanager/css/_cache/**
 **/_cache
 
 !.gitignore
+.mysql-data/*
