@@ -23,6 +23,7 @@ services:
       PMA_PORT: 3306
       MYSQL_PASSWORD: db_user_pass
       PMA_ARBITRARY: 1
+      UPLOAD_LIMIT: 2G
     restart: always
     ports:
       - 8081:80
