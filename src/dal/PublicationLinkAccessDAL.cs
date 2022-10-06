@@ -1,6 +1,8 @@
-﻿using asf.cms.helper;
+﻿using asf.cms.exception;
+using asf.cms.helper;
 using asf.cms.model;
 using NHibernate;
+using System;
 using System.Collections.Generic;
 
 namespace asf.cms.dal
@@ -11,12 +13,27 @@ namespace asf.cms.dal
 
         public IList<PublicationLinkAccessResultVO> GetPublicationLinkAccessResults()
         {
+            IList<PublicationLinkAccessResultVO> Lista = new List<PublicationLinkAccessResultVO>();
+
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(GET_PUBLICATION_LINK_ACCESS_RESULTS);
-                iquery.AddEntity(typeof(PublicationLinkAccessResultVO));
-                return iquery.List<PublicationLinkAccessResultVO>();
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(GET_PUBLICATION_LINK_ACCESS_RESULTS);
+                    iquery.AddEntity(typeof(PublicationLinkAccessResultVO));
+                    Lista = iquery.List<PublicationLinkAccessResultVO>();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
+
+            return Lista;
         }
     }
 }

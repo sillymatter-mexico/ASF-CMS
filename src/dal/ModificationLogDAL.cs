@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using asf.cms.exception;
+using asf.cms.helper;
 using asf.cms.model;
 
 namespace asf.cms.dal
@@ -14,77 +16,155 @@ namespace asf.cms.dal
 
         public List<ModificationLogVO> ListAll()
         {
-            return new List<ModificationLogVO>(list("SELECT mod FROM ModificationLogVO mod"));
+            try
+            {
+                return new List<ModificationLogVO>(list("SELECT mod FROM ModificationLogVO mod"));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }
         }
 
         public List<ModificationLogVO> List(DateTime start, DateTime end)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            string dq = DateRangeQuery(start, end, ref param);
-            return new List<ModificationLogVO>(list("SELECT mod FROM ModificationLogVO mod" + (String.IsNullOrEmpty(dq) ? "" : (" WHERE " + dq)), param));
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                string dq = DateRangeQuery(start, end, ref param);
+                return new List<ModificationLogVO>(list("SELECT mod FROM ModificationLogVO mod" + (String.IsNullOrEmpty(dq) ? "" : (" WHERE " + dq)), param));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         public List<ModificationLogVO> GetByTypeAndTarget(string type, string target)
         {
             string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.Type=:type AND mod.TargetType=:target";
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("type", type);
-            param.Add("target", target);
 
-            return new List<ModificationLogVO>(list(query, param));
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("type", ExpresionStringHelper.replaceEscapeCharacter(type));
+                param.Add("target", ExpresionStringHelper.replaceEscapeCharacter(target));
+
+                return new List<ModificationLogVO>(list(query, param));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }
         }
 
         public List<ModificationLogVO> GetByTypeAndTarget(string type, string target, DateTime start, DateTime end)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            string dq = DateRangeQuery(start, end, ref param);
-            string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.Type=:type AND mod.TargetType=:target" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                string dq = DateRangeQuery(start, end, ref param);
+                string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.Type=:type AND mod.TargetType=:target" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
 
-            param.Add("type", type);
-            param.Add("target", target);
+                param.Add("type", ExpresionStringHelper.replaceEscapeCharacter(type));
+                param.Add("target", ExpresionStringHelper.replaceEscapeCharacter(target));
 
-            return new List<ModificationLogVO>(list(query, param));
+                return new List<ModificationLogVO>(list(query, param));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         public List<ModificationLogVO> GetByType(string type, DateTime start, DateTime end)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            string dq = DateRangeQuery(start, end, ref param);
-            string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.Type=:type" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
-            
-            param.Add("type", type);
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                string dq = DateRangeQuery(start, end, ref param);
+                string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.Type=:type" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
 
-            return new List<ModificationLogVO>(list(query, param));
+                param.Add("type", ExpresionStringHelper.replaceEscapeCharacter(type));
+
+                return new List<ModificationLogVO>(list(query, param));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         public List<ModificationLogVO> GetByTarget(string target, DateTime start, DateTime end)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            string dq = DateRangeQuery(start, end, ref param);
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                string dq = DateRangeQuery(start, end, ref param);
 
-            string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.TargetType=:target" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
+                string query = "SELECT mod FROM ModificationLogVO mod WHERE mod.TargetType=:target" + (String.IsNullOrEmpty(dq) ? "" : (" AND " + dq));
 
-            param.Add("target", target);
+                param.Add("target", ExpresionStringHelper.replaceEscapeCharacter(target));
 
-            return new List<ModificationLogVO>(list(query, param));
+                return new List<ModificationLogVO>(list(query, param));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         private static string DateRangeQuery(DateTime start, DateTime end, ref Dictionary<string, object> param)
         {
-            string res = "";
-            if (start != null)
+            try
             {
-                res += "mod.Created<=:start";
-                param.Add("start", start);
+                string res = "";
+                if (start != null)
+                {
+                    res += "mod.Created<=:start";
+                    param.Add("start", start);
+                }
+                if (end != null)
+                {
+                    if (res != "")
+                        res += " AND ";
+                    res += "mod.Created>=:end";
+                    param.Add("end", end);
+                }
+                return res;
             }
-            if (end != null)
+            catch (Exception ex)
             {
-                if (res != "")
-                    res += " AND ";
-                res += "mod.Created>=:end";
-                param.Add("end", end);
+                throw new ProcessException("Error en el proceso.");
             }
-            return res;
+            finally
+            {
+                
+            }
         }
     }
 }

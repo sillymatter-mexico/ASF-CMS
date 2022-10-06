@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using NHibernate;
 using asf.cms.helper;
+using asf.cms.exception;
 
 namespace asf.cms.dal
 {
@@ -11,12 +12,24 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    session.Save(o);
-                    tx.Commit();
+                    using (ITransaction tx = session.BeginTransaction())
+                    {
+                        session.Save(o);
+                        tx.Commit();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
+
             return o;
         }
 
@@ -24,11 +37,22 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    session.Delete(o);
-                    tx.Commit();
+                    using (ITransaction tx = session.BeginTransaction())
+                    {
+                        session.Delete(o);
+                        tx.Commit();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
@@ -36,11 +60,22 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    session.CreateSQLQuery(query).ExecuteUpdate();
-                    tx.Commit();
+                    using (ITransaction tx = session.BeginTransaction())
+                    {
+                        session.CreateSQLQuery(query).ExecuteUpdate();
+                        tx.Commit();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
@@ -48,27 +83,52 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    session.SaveOrUpdate(o);
-                    tx.Commit();
-                    return o;
+                    using (ITransaction tx = session.BeginTransaction())
+                    {
+                        session.SaveOrUpdate(o);
+                        tx.Commit();
+                        
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
+
+            return o;
         }
 
         public List<T> UpdateList(List<T> list, string deleteQuery)
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                using (ITransaction tx = session.BeginTransaction())
+                try
                 {
-                    session.CreateQuery(deleteQuery).ExecuteUpdate();
-                    foreach (T o in list)
-                        session.SaveOrUpdate(o);
-                    tx.Commit();
+                    using (ITransaction tx = session.BeginTransaction())
+                    {
+                        session.CreateQuery(deleteQuery).ExecuteUpdate();
+                        foreach (T o in list)
+                            session.SaveOrUpdate(o);
+                        tx.Commit();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
+
             return list;
         }
         
@@ -76,44 +136,103 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
+                try
+                {
                     T o = session.Get<T>(id);
                     return o;
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                  
             }
         }
 
         protected IList<T> list(String query)
         {
-            return list(query, new Dictionary<string, object>());
+            IList<T> Lista = new List<T>();
+
+            try
+            {
+                Lista = list(query, new Dictionary<string, object>());
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }
+
+            return Lista;
         }
 
         protected IList<T> list(String query,Dictionary<string,object> parameters)
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                    IQuery iquery =  session.CreateQuery(query);
+                try
+                {
+                    IQuery iquery = session.CreateQuery(query);
                     foreach (KeyValuePair<string, object> param in parameters)
                         iquery.SetParameter(param.Key, param.Value);
                     IList<T> Lista = iquery.List<T>();
                     return Lista;
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
         protected IList<T> list(String query, Type resultType)
         {
-                return list(query, new Dictionary<string, object>(),resultType);
+            try
+            {
+                return list(query, new Dictionary<string, object>(), resultType);
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         protected IList<T> list(String query, Dictionary<string, object> parameters, Type resultType)
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query);
-                iquery.AddEntity(resultType);
-                string[] paramNames = iquery.NamedParameters;
-                foreach (KeyValuePair<string, object> param in parameters)
-                    iquery.SetParameter(param.Key, param.Value);
-                IList<T> Lista = iquery.List<T>();
-                return Lista;
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query);
+                    iquery.AddEntity(resultType);
+                    string[] paramNames = iquery.NamedParameters;
+                    foreach (KeyValuePair<string, object> param in parameters)
+                        iquery.SetParameter(param.Key, param.Value);
+                    IList<T> Lista = iquery.List<T>();
+                    return Lista;
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
@@ -123,47 +242,102 @@ namespace asf.cms.dal
             maxResults = maxResults < 1 ? 1 : maxResults;
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                IQuery iquery = session.CreateQuery(query);
-                iquery.SetMaxResults(maxResults);
-                iquery.SetFirstResult(offset);
-                foreach (KeyValuePair<string, object> param in parameters)
-                    iquery.SetParameter(param.Key, param.Value);
-                return iquery.List<T>();
+                try
+                {
+                    IQuery iquery = session.CreateQuery(query);
+                    iquery.SetMaxResults(maxResults);
+                    iquery.SetFirstResult(offset);
+                    foreach (KeyValuePair<string, object> param in parameters)
+                        iquery.SetParameter(param.Key, param.Value);
+                    return iquery.List<T>();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
         protected T getObject(String query)
         {
-            return getObject(query, new Dictionary<string, object>());
+            try
+            {
+                return getObject(query, new Dictionary<string, object>());
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         protected T getObject(String query, Dictionary<string, object> parameters)
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                IQuery iquery = session.CreateQuery(query);
-                foreach (KeyValuePair<string, object> param in parameters)
-                    iquery.SetParameter(param.Key, param.Value);
-                T obj = iquery.UniqueResult<T>();
-                return obj;
+                try
+                {
+                    IQuery iquery = session.CreateQuery(query);
+                    foreach (KeyValuePair<string, object> param in parameters)
+                        iquery.SetParameter(param.Key, param.Value);
+                    T obj = iquery.UniqueResult<T>();
+                    return obj;
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
         protected T getObject(String query, Type resultType)
         {
-            return getObject(query, new Dictionary<string, object>(),resultType);
+            try
+            {
+                return getObject(query, new Dictionary<string, object>(), resultType);
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         protected T getObject(String query, Dictionary<string, object> parameters, Type resultType)
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query);
-                iquery.AddEntity(resultType);
-                foreach (KeyValuePair<string, object> param in parameters)
-                    iquery.SetParameter(param.Key, param.Value);
-                T obj = iquery.UniqueResult<T>();
-                return obj;
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query);
+                    iquery.AddEntity(resultType);
+                    foreach (KeyValuePair<string, object> param in parameters)
+                        iquery.SetParameter(param.Key, param.Value);
+                    T obj = iquery.UniqueResult<T>();
+                    return obj;
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
@@ -171,10 +345,21 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query);
-                foreach (KeyValuePair<string, object> param in parameters)
-                    iquery.SetParameter(param.Key, param.Value);
-                return iquery.ExecuteUpdate();
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query);
+                    foreach (KeyValuePair<string, object> param in parameters)
+                        iquery.SetParameter(param.Key, param.Value);
+                    return iquery.ExecuteUpdate();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
 
@@ -182,8 +367,19 @@ namespace asf.cms.dal
         {
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query).AddScalar("result", NHibernateUtil.String);
-                return (string)iquery.UniqueResult();
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query).AddScalar("result", NHibernateUtil.String);
+                    return (string)iquery.UniqueResult();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }                
             }
         }
     }

@@ -5,6 +5,7 @@ using NHibernate;
 using NHibernate.Cfg;
 using asf.cms.model;
 using asf.cms.helper;
+using asf.cms.exception;
 
 namespace asf.cms.dal
 {
@@ -12,22 +13,46 @@ namespace asf.cms.dal
     {
         public SectionLabelVO GetById(int sectionId, int languageId)
         {
-            SectionLabelIdVO slid=new SectionLabelIdVO();
-            slid.LanguageId=languageId;
-            slid.SectionId=sectionId;
-            return this.GetById(slid);
+            try
+            {
+                SectionLabelIdVO slid = new SectionLabelIdVO();
+                slid.LanguageId = languageId;
+                slid.SectionId = sectionId;
+                return this.GetById(slid);
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
+
         /*Gets the object in the language, if the language is not found returns the title in other
          * language*/
          
         public SectionLabelVO GetByFitLanguage(int sectionId, int languageId)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("sId", sectionId);
-            param.Add("lId", languageId);
-            string query = "select * from section_label where section_id=:sId order by language_id=:lId desc limit 1;";
-            return this.getObject(query,param,typeof(SectionLabelVO));
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("sId", sectionId);
+                param.Add("lId", languageId);
+                string query = "select * from section_label where section_id=:sId order by language_id=:lId desc limit 1;";
+                return this.getObject(query, param, typeof(SectionLabelVO));
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
+
         /*public IList<SectionLabelVO> GetMainByLanguage(int languageId)
         {
             Dictionary<string, object> param = new Dictionary<string, object>();

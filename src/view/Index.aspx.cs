@@ -10,6 +10,7 @@ using log4net;
 using Moxiecode.Manager;
 using Moxiecode.Manager.FileSystems;
 using Moxiecode.Manager.Utils;
+using asf.cms.exception;
 
 namespace asf.cms.view
 {
@@ -50,7 +51,7 @@ namespace asf.cms.view
             MethodInfo mi = null;
             try
             {
-                Controller c = (Controller)obj; 
+                Controller c = (Controller)obj;
                 if (!c.isValidReq())
                     return;
                 mi = classType.GetMethod(metodo);
@@ -67,10 +68,17 @@ namespace asf.cms.view
             }
             catch (Exception ex)
             {
-                log.Error(ex.Message + ex.StackTrace.ToString() + "\\n");
-                if (ex.InnerException != null) log.Error("--- INNER:" + ex.InnerException.Message + ex.InnerException.StackTrace.ToString());
-                log.Error("dirigiendose a default/notfound");
-                Response.Redirect("~/Default/NotFound");
+                if (ex.InnerException.Message == "Error en el proceso.")
+                {
+                    Response.Write("<script>alert('Error en el proceso, favor de actualizar la pagina.');</script>");
+                }
+                else
+                {
+                    log.Error(ex.Message + ex.StackTrace.ToString() + "\\n");
+                    if (ex.InnerException != null) log.Error("--- INNER:" + ex.InnerException.Message + ex.InnerException.StackTrace.ToString());
+                    log.Error("dirigiendose a default/notfound");
+                    Response.Redirect("~/Default/NotFound");
+                }                
             }
 
             /*string controller = Request["controllerClass"].ToString();

@@ -41,6 +41,5 @@ namespace asf.cms.bll
             AuditReportDAL adal = new AuditReportDAL();
             return new List<AuditReportInfo>(adal.GetAllActive());
         }
-
     }
 }

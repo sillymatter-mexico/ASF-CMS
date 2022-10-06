@@ -6,6 +6,8 @@ using asf.cms.bll;
 using NHibernate;
 using asf.cms.helper;
 using NHibernate.Transform;
+using static System.Collections.Specialized.BitVector32;
+using asf.cms.exception;
 
 namespace asf.cms.dal
 {
@@ -20,17 +22,39 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetAllFromView()
         {
-            return this.list("select n from NewsVO as n");
+            try
+            {
+                return this.list("select n from NewsVO as n");
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         public IList<NewsVO> GetAllFromView(int languageId)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("language_id", languageId);
-            List<NewsVO> nvsToRemove = new List<NewsVO>();
-            IList<NewsVO> anchoredNews = this.list("select n from NewsVO as n where n.LanguageId=:language_id order by n.NewsPin DESC, n.Updated DESC", param);
-            removeDueNews(anchoredNews);
-            return anchoredNews;
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("language_id", languageId);
+                List<NewsVO> nvsToRemove = new List<NewsVO>();
+                IList<NewsVO> anchoredNews = this.list("select n from NewsVO as n where n.LanguageId=:language_id order by n.NewsPin DESC, n.Updated DESC", param);
+                removeDueNews(anchoredNews);
+                return anchoredNews;
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -40,27 +64,39 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetAll(bool news_include)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            IList<PublicationVO> publications = pDAL.ListPublicationsByNewsInclude(news_include);
-            IList<NewsVO> news = new List<NewsVO>();
+            try
+            {
+                PublicationDAL pDAL = new PublicationDAL();
+                IList<PublicationVO> publications = pDAL.ListPublicationsByNewsInclude(news_include);
+                IList<NewsVO> news = new List<NewsVO>();
 
 
-            foreach (PublicationVO publication in publications)
-            { 
-                news.Add(new NewsVO(){
-                    Content = publication.NewsContent,
-                    Id = publication.Id,
-                    NewsPin = publication.NewsPin,
-                    NewsTTL = publication.NewsTTL,
-                    Permalink = publication.Permalink,
-                    Title = publication.Title,
-                    Updated = publication.Updated
-                });
+                foreach (PublicationVO publication in publications)
+                {
+                    news.Add(new NewsVO()
+                    {
+                        Content = publication.NewsContent,
+                        Id = publication.Id,
+                        NewsPin = publication.NewsPin,
+                        NewsTTL = publication.NewsTTL,
+                        Permalink = publication.Permalink,
+                        Title = publication.Title,
+                        Updated = publication.Updated
+                    });
+                }
+
+                removeDueNews(news);
+
+                return news;
             }
-
-            removeDueNews(news);
-
-            return news;
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -70,26 +106,36 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetAll()
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            IList<PublicationVO> publications = pDAL.GetAll();
-            IList<NewsVO> news = new List<NewsVO>();
-
-
-            foreach (PublicationVO publication in publications)
+            try
             {
-                news.Add(new NewsVO()
-                {
-                    Content = publication.NewsContent,
-                    Id = publication.Id,
-                    NewsPin = publication.NewsPin,
-                    NewsTTL = publication.NewsTTL,
-                    Permalink = publication.Permalink,
-                    Title = publication.Title,
-                    Updated = publication.Updated
-                });
-            }
+                PublicationDAL pDAL = new PublicationDAL();
+                IList<PublicationVO> publications = pDAL.GetAll();
+                IList<NewsVO> news = new List<NewsVO>();
 
-            return news;
+                foreach (PublicationVO publication in publications)
+                {
+                    news.Add(new NewsVO()
+                    {
+                        Content = publication.NewsContent,
+                        Id = publication.Id,
+                        NewsPin = publication.NewsPin,
+                        NewsTTL = publication.NewsTTL,
+                        Permalink = publication.Permalink,
+                        Title = publication.Title,
+                        Updated = publication.Updated
+                    });
+                }
+
+                return news;
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -99,26 +145,37 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetAll(int languageId)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            IList<PublicationVO> publications = pDAL.GetAll(languageId);
-            IList<NewsVO> news = new List<NewsVO>();
-
-
-            foreach (PublicationVO publication in publications)
+            try
             {
-                news.Add(new NewsVO()
-                {
-                    Content = publication.NewsContent,
-                    Id = publication.Id,
-                    NewsPin = publication.NewsPin,
-                    NewsTTL = publication.NewsTTL,
-                    Permalink = publication.Permalink,
-                    Title = publication.Title,
-                    Updated = publication.Updated
-                });
-            }
+                PublicationDAL pDAL = new PublicationDAL();
+                IList<PublicationVO> publications = pDAL.GetAll(languageId);
+                IList<NewsVO> news = new List<NewsVO>();
 
-            return news;
+
+                foreach (PublicationVO publication in publications)
+                {
+                    news.Add(new NewsVO()
+                    {
+                        Content = publication.NewsContent,
+                        Id = publication.Id,
+                        NewsPin = publication.NewsPin,
+                        NewsTTL = publication.NewsTTL,
+                        Permalink = publication.Permalink,
+                        Title = publication.Title,
+                        Updated = publication.Updated
+                    });
+                }
+
+                return news;
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -128,25 +185,37 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetNewsBySectionId(int sectionId)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            IList<PublicationVO> publications = pDAL.GetListBySection(sectionId, Language.GetCurrentLanguageId());
-            IList<NewsVO> news = new List<NewsVO>();
+            try
+            {
+                PublicationDAL pDAL = new PublicationDAL();
+                IList<PublicationVO> publications = pDAL.GetListBySection(sectionId, Language.GetCurrentLanguageId());
+                IList<NewsVO> news = new List<NewsVO>();
 
 
-            foreach (PublicationVO publication in publications)
-            { 
-                news.Add(new NewsVO(){
-                    Content = publication.NewsContent,
-                    Id = publication.Id,
-                    NewsPin = publication.NewsPin,
-                    NewsTTL = publication.NewsTTL,
-                    Permalink = publication.Permalink,
-                    Title = publication.Title,
-                    Updated = publication.Updated
-                });
+                foreach (PublicationVO publication in publications)
+                {
+                    news.Add(new NewsVO()
+                    {
+                        Content = publication.NewsContent,
+                        Id = publication.Id,
+                        NewsPin = publication.NewsPin,
+                        NewsTTL = publication.NewsTTL,
+                        Permalink = publication.Permalink,
+                        Title = publication.Title,
+                        Updated = publication.Updated
+                    });
+                }
+                removeDueNews(news);
+                return news;
             }
-            removeDueNews(news);
-            return news;
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -157,28 +226,39 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetNewsBySectionIdAndPublicationIds(int sectionId, IList<int> publicationIds)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            IList<PublicationVO> publications = pDAL.GetListBySection(sectionId, Language.GetCurrentLanguageId());
-            IList<NewsVO> news = new List<NewsVO>();
+            try
+            {
+                PublicationDAL pDAL = new PublicationDAL();
+                IList<PublicationVO> publications = pDAL.GetListBySection(sectionId, Language.GetCurrentLanguageId());
+                IList<NewsVO> news = new List<NewsVO>();
 
-
-            foreach (PublicationVO publication in publications)
-            { 
-                if(publicationIds.Contains(publication.Id))
+                foreach (PublicationVO publication in publications)
                 {
-                    news.Add(new NewsVO(){
-                        Content = publication.NewsContent,
-                        Id = publication.Id,
-                        NewsPin = publication.NewsPin,
-                        NewsTTL = publication.NewsTTL,
-                        Permalink = publication.Permalink,
-                        Title = publication.Title,
-                        Updated = publication.Updated
-                    });
+                    if (publicationIds.Contains(publication.Id))
+                    {
+                        news.Add(new NewsVO()
+                        {
+                            Content = publication.NewsContent,
+                            Id = publication.Id,
+                            NewsPin = publication.NewsPin,
+                            NewsTTL = publication.NewsTTL,
+                            Permalink = publication.Permalink,
+                            Title = publication.Title,
+                            Updated = publication.Updated
+                        });
+                    }
                 }
-            }
 
-            return news;
+                return news;
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -188,21 +268,33 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> GetNewsByPublicationId(int publicationId)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            PublicationVO publication = pDAL.GetById(publicationId);
-            IList<NewsVO> news = new List<NewsVO>();
-            news.Add(new NewsVO(){
-                Content = publication.NewsContent,
-                Id = publication.Id,
-                NewsPin = publication.NewsPin,
-                NewsTTL = publication.NewsTTL,
-                Permalink = publication.Permalink,
-                Title = publication.Title,
-                Updated = publication.Updated
-            });
-            removeDueNews(news);
+            try
+            {
+                PublicationDAL pDAL = new PublicationDAL();
+                PublicationVO publication = pDAL.GetById(publicationId);
+                IList<NewsVO> news = new List<NewsVO>();
+                news.Add(new NewsVO()
+                {
+                    Content = publication.NewsContent,
+                    Id = publication.Id,
+                    NewsPin = publication.NewsPin,
+                    NewsTTL = publication.NewsTTL,
+                    Permalink = publication.Permalink,
+                    Title = publication.Title,
+                    Updated = publication.Updated
+                });
+                removeDueNews(news);
 
-            return news;
+                return news;
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -211,6 +303,8 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> ListNewsAdmin()
         {
+            IList<NewsVO> Lista = new List<NewsVO>();
+
             string query = "select publication.id  as Id,title as Title, publication.news_content as Content, section.news_include as IncludeInSection, " +
                 "publication.news_include as IncludeInPublication, publication.news_ttl as NewsTTL, publication.news_pin as NewsPin, publication.is_main as IsMain " +
                 "from publication, section_label, section " +
@@ -222,11 +316,23 @@ namespace asf.cms.dal
 
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query);
-                iquery.SetResultTransformer(Transformers.AliasToBean(typeof(NewsVO)));
-                IList<NewsVO> Lista = iquery.List<NewsVO>();
-                return Lista;
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query);
+                    iquery.SetResultTransformer(Transformers.AliasToBean(typeof(NewsVO)));
+                    Lista = iquery.List<NewsVO>();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }
             }
+
+            return Lista;
         }
 
         /// <summary>
@@ -236,10 +342,12 @@ namespace asf.cms.dal
         /// <returns></returns>
         public IList<NewsVO> ListNewsAdmin(string username)
         {
+            IList<NewsVO> Lista = new List<NewsVO>();
+
             string query = "select publication.id  as Id,title as Title, publication.news_content as Content, section.news_include as IncludeInSection, " +
                 "publication.news_include as IncludeInPublication, publication.news_ttl as NewsTTL, publication.news_pin as NewsPin " +
                 "from publication, section_label , group_has_section sg, group_has_user gu, section " +
-                "where gu.user_username='" + username + "' " +
+                "where gu.user_username=:username " +
                 "and sg.group_id=gu.group_id " +
                 "and publication.section_id=sg.section_id " +
                 "and section_label.language_id=publication.language_id " +
@@ -247,43 +355,68 @@ namespace asf.cms.dal
                 "and section.active=1 and publication.active=1 " +
                 "and section.id=publication.section_id order by Title;";
          //   return this.list(query, typeof(NewsVO));
+
             using (ISession session = NHibernateHelper.GetCurrentSession())
             {
-                ISQLQuery iquery = session.CreateSQLQuery(query);
-                iquery.SetResultTransformer(Transformers.AliasToBean(typeof(NewsVO)));
-                IList<NewsVO> Lista = iquery.List<NewsVO>();
-                return Lista;
+                try
+                {
+                    ISQLQuery iquery = session.CreateSQLQuery(query);
+                    iquery.SetParameter("username", ExpresionStringHelper.replaceEscapeCharacter(username));
+                    iquery.SetResultTransformer(Transformers.AliasToBean(typeof(NewsVO)));
+                    Lista = iquery.List<NewsVO>();
+                }
+                catch (Exception ex)
+                {
+                    throw new ProcessException("Error en el proceso.");
+                }
+                finally
+                {
+                    session.Close();
+                }
             }
+
+            return Lista;
         }
 
         public NewsVO GetByIdFromPublication(int newsId)
         {
-            PublicationDAL pDAL = new PublicationDAL();
-            PublicationVO publication = pDAL.GetById(newsId);
-            NewsVO newVO = new NewsVO();
-            bool isSection = (publication == null);
-            if (isSection)
+            try
             {
-                newVO = new NewsVO()
+                PublicationDAL pDAL = new PublicationDAL();
+                PublicationVO publication = pDAL.GetById(newsId);
+                NewsVO newVO = new NewsVO();
+                bool isSection = (publication == null);
+                if (isSection)
                 {
-                    IsSection = isSection
-                };
+                    newVO = new NewsVO()
+                    {
+                        IsSection = isSection
+                    };
+                }
+                else
+                {
+                    newVO = new NewsVO()
+                    {
+                        Content = publication.NewsContent,
+                        Id = publication.Id,
+                        NewsPin = publication.NewsPin,
+                        NewsTTL = publication.NewsTTL,
+                        Permalink = publication.Permalink,
+                        Title = publication.Title,
+                        Updated = publication.Updated,
+                        IsSection = isSection
+                    };
+                }
+                return newVO;
             }
-            else
+            catch (Exception ex)
             {
-                newVO = new NewsVO()
-                {
-                    Content = publication.NewsContent,
-                    Id = publication.Id,
-                    NewsPin = publication.NewsPin,
-                    NewsTTL = publication.NewsTTL,
-                    Permalink = publication.Permalink,
-                    Title = publication.Title,
-                    Updated = publication.Updated,
-                    IsSection = isSection
-                };
+                throw new ProcessException("Error en el proceso.");
             }
-            return newVO;
+            finally
+            {
+                
+            }            
         }
 
         /// <summary>
@@ -293,29 +426,41 @@ namespace asf.cms.dal
         private void removeDueNews(IList<NewsVO> original) 
         {
             List<NewsVO> nvsToRemove = new List<NewsVO>();
-            //Remove the ones that should not be displayed
-            foreach (NewsVO nv in original)
-            {
-                if (!nv.NewsPin)
-                {
-                    if (nv.NewsTTL != null && nv.NewsTTL != 0)
-                    {
 
-                        DateTime dateOfDead = nv.Updated.AddDays(nv.NewsTTL);
-                        int comparison = dateOfDead.CompareTo(DateTime.Now);
-                        if (comparison < 0)
+            try
+            {
+                //Remove the ones that should not be displayed
+                foreach (NewsVO nv in original)
+                {
+                    if (!nv.NewsPin)
+                    {
+                        if (nv.NewsTTL != null && nv.NewsTTL != 0)
                         {
-                            //Remove it
-                            nvsToRemove.Add(nv);
+
+                            DateTime dateOfDead = nv.Updated.AddDays(nv.NewsTTL);
+                            int comparison = dateOfDead.CompareTo(DateTime.Now);
+                            if (comparison < 0)
+                            {
+                                //Remove it
+                                nvsToRemove.Add(nv);
+                            }
                         }
                     }
                 }
-            }
 
-            foreach (NewsVO nv in nvsToRemove)
-            {
-                original.Remove(nv);
+                foreach (NewsVO nv in nvsToRemove)
+                {
+                    original.Remove(nv);
+                }
             }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
     }
 }

@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Text;
 using Excel;
 using System.IO;
-
+using asf.cms.exception;
 
 namespace asf.cms.dal
 {
@@ -37,54 +37,79 @@ namespace asf.cms.dal
 
             dt = ds.Tables[0];  
         }
+
         string getValue(int i, int pos)
         {
-            if (dt.Rows[i][pos]==null)
-                return "";
-            return dt.Rows[i][pos].ToString().Trim();
+            try
+            {
+                if (dt.Rows[i][pos] == null)
+                    return "";
+                return dt.Rows[i][pos].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
+
         public List<String> getInsertScriptFromBook(List<string> campos, bool autoIndex)
         {
-            List<String> script = new List<string>();
-            int indexClaveAudit=campos.IndexOf("clave_audit");
-
-            string query = "INSERT INTO preload_audit_report(";
-            foreach (string c in campos)
-                query += mapToMysql(c) + ",";
-            if (autoIndex)
-                query += "ordenar,num_r,";
-
-            query += "parsed_code) values";
-
-            System.Text.StringBuilder sb = new System.Text.StringBuilder(query);
-            
-            for (int i=0;i<dt.Rows.Count;i++)
+            try
             {
-                if (dt.Rows[i][0].ToString().Trim() == "")
-                    continue;
-                string insert = "";
-                if ( i!=0&& ((i% 100) == 0))
-                {
-                    insert = "";
-                    script.Add(sb.ToString());
-                    sb = new StringBuilder(query);
-                }
-                else if(i%100>0)
-                    insert += ", ";
+                List<String> script = new List<string>();
+                int indexClaveAudit = campos.IndexOf("clave_audit");
 
-                insert += "(";
-                for(int k=0;k<campos.Count;k++)
-                    insert += "'" + getValue(i,k) + "',";
-
+                string query = "INSERT INTO preload_audit_report(";
+                foreach (string c in campos)
+                    query += mapToMysql(c) + ",";
                 if (autoIndex)
-                    insert += "'" + i + "','"+i+"',";
-                insert += "'" + parseAuditCode(getValue(i, indexClaveAudit)) + "')";
-                sb.Append(insert);
+                    query += "ordenar,num_r,";
+
+                query += "parsed_code) values";
+
+                System.Text.StringBuilder sb = new System.Text.StringBuilder(query);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i][0].ToString().Trim() == "")
+                        continue;
+                    string insert = "";
+                    if (i != 0 && ((i % 100) == 0))
+                    {
+                        insert = "";
+                        script.Add(sb.ToString());
+                        sb = new StringBuilder(query);
+                    }
+                    else if (i % 100 > 0)
+                        insert += ", ";
+
+                    insert += "(";
+                    for (int k = 0; k < campos.Count; k++)
+                        insert += "'" + getValue(i, k) + "',";
+
+                    if (autoIndex)
+                        insert += "'" + i + "','" + i + "',";
+                    insert += "'" + parseAuditCode(getValue(i, indexClaveAudit)) + "')";
+                    sb.Append(insert);
+                }
+                excelReader.Close();
+                script.Add(sb.ToString());
+                return script;
             }
-            excelReader.Close();
-            script.Add(sb.ToString());
-            return script;
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
+
         public string getFirstSheetName()
         {
             if (dt == null)
@@ -92,25 +117,51 @@ namespace asf.cms.dal
 
             return dt.TableName;
         }
+
         public List<string> getColumnNames(string sheet)
         {
             List<string> names = new List<string>();
-            for (int i = 0; i < dt.Columns.Count; i++)
-                names.Add(dt.Columns[i].ColumnName.ToLower());
+
+            try
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                    names.Add(dt.Columns[i].ColumnName.ToLower());
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }
+            
             return names;
         }
         string parseAuditCode(string code)
         {
-            string parsedCode = "";
-            string[] parts = code.Split('-');
-            for (int i = 0; i < parts.Length; i++)
+            try
             {
-                if (i > 0)
-                    parsedCode += "-";
-                parsedCode += parts[i].TrimStart(' ', '0');
+                string parsedCode = "";
+                string[] parts = code.Split('-');
+                for (int i = 0; i < parts.Length; i++)
+                {
+                    if (i > 0)
+                        parsedCode += "-";
+                    parsedCode += parts[i].TrimStart(' ', '0');
+                }
+                return parsedCode;
             }
-            return parsedCode;
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
+
         string mapToMysql(String excelColumn)
         {
             if(excelColumn=="c_cta_pub")
@@ -135,6 +186,7 @@ namespace asf.cms.dal
                 return "group_name";
             return excelColumn;
         }
+
         /*
         public ExcelAuditDAL(string path)
         {

@@ -8,6 +8,7 @@ using asf.cms.helper;
 using System.Text;
 using NHibernate.Criterion;
 using NHibernate.Transform;
+using asf.cms.exception;
 
 namespace asf.cms.dal
 {
@@ -21,10 +22,20 @@ namespace asf.cms.dal
         }
         public void InactivaById(int id)
         {
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("id", id);
-            this.Update("update recuperaciones rvo set active=0 where id=:id",param);
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                param.Add("id", id);
+                this.Update("update recuperaciones rvo set active=0 where id=:id", param);
+            }
+            catch (Exception ex)
+            {
+                throw new ProcessException("Error en el proceso.");
+            }
+            finally
+            {
+                
+            }            
         }
-
     }
 }
