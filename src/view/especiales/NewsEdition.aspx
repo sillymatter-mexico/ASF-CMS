@@ -9,8 +9,15 @@
         <script src="../view/js/jquery/jquery.js" type="text/javascript"></script>
         <script src="../view/js/jquery/jquery.form.js" type="text/javascript"></script>
         <script src="../view/js/jquery/jquery-ui.js" type="text/javascript"></script>
-        <script src="../view/js/jquery/grid/js/grid.locale-sp.js" type="text/javascript"></script>
-        <script src="../view/js/jquery/grid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+        
+
+        <%--<script src="../view/js/jquery/grid/js/grid.locale-sp.js" type="text/javascript"></script>--%>
+        <%--<script src="../view/js/jquery/grid/js/jquery.jqGrid.min.js" type="text/javascript"></script>--%>
+
+    <script type="text/javascript" src="../view/js/jquery/grid_4_15_5/i18n/grid.locale-es.js"></script>
+    <script type="text/javascript" src="../view/js/jquery/grid_4_15_5/jquery.jqgrid.min.js"></script>
+
+
         <script type="text/javascript" src="../view/js/tinymce/jquery.tinymce.js"></script>
         <script type="text/javascript" src="../view/js/editPubNew.js"></script>
 	</head>

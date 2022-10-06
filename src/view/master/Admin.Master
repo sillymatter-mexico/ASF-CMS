@@ -30,9 +30,14 @@
 	<title><%=title %></title>
 	
 	<link rel="stylesheet" type="text/css" href="../view/lib/fomantic-ui-2.8.4/semantic.min.css" />
-    <link rel="stylesheet" type="text/css" href="../view/lib/DataTables/datatables.min.css" />
+    <%--<link rel="stylesheet" type="text/css" href="../view/lib/DataTables/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="../view/lib/DataTables/Buttons-1.6.0/buttons.dataTables.min.css" />
-	<link rel="stylesheet" type="text/css" href="../view/lib/DataTables/Buttons-1.6.0/buttons.semanticui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../view/lib/DataTables/Buttons-1.6.0/buttons.semanticui.min.css" />--%>
+
+    <link rel="stylesheet" href="../lib/Datatables2/datatables.min.css" />
+    <link rel="stylesheet" href="../lib/Datatables2/Buttons-2.2.3/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="../lib/Datatables2/Buttons-2.2.3/css/buttons.semanticui.min.css" />
+
     <link rel="stylesheet" type="text/css" href="../view/css/admin/admin_extra_v3.css" />
 	
 	<script type="text/javascript" src="../view/lib/jquery1.12.4/jquery-1.12.4.min.js"></script>
@@ -45,6 +50,8 @@
 		window.jQuery = window.$ = $.noConflict(true);
 	</script>
 	<script type="text/javascript" src="../view/lib/fomantic-ui-2.8.4/semantic.min.js"></script>
+
+
     <script type="text/javascript" src="../view/lib/DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="../view/lib/DataTables/Buttons-1.6.0/dataTables.buttons.min.js"></script>
 	<script type="text/javascript" src="../view/lib/DataTables/Buttons-1.6.0/buttons.semanticui.min.js"></script>
